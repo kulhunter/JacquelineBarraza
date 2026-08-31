@@ -54,7 +54,7 @@ El mayor freno de compra no es el precio. Es el miedo a salir del estudio con al
 **La oportunidad:** Quien logre eliminar ese miedo gana la venta. Jacqueline lo elimina con autoridad verificable (WinArt 2026, PhiAcademy) y con educación técnica en sus redes.
 
 ### Insight #3: La Alumna Abandonada
-El mercado de formación está saturado de cursos baratos que prometen certificados en 2 días. Las alumnas egresan sin saber calibrar profundidad de aguja. La demanda real es: mano a mano, corrección en tiempo real, confianza para atender a su primera clienta.
+El mercado de formación está saturado de cursos deficientes, sin cuidado y que no enseñan lo necesario para la práctica real. Las alumnas egresan sin saber calibrar profundidad de aguja. La demanda real es: mano a mano, corrección en tiempo real, confianza para atender a su primera clienta.
 
 ---
 
