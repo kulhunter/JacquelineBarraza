@@ -1,405 +1,940 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Jacqueline Barraza | The Master Story Deck</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,600;0,800;1,400;1,600&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Jacqueline Barraza — Pitch Estratégico 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold2: #F0D080;
+      --white: #FFFFFF;
+      --black: #070709;
+      --dark: #0D0D14;
+    }
+
+    html, body {
+      width:100%; height:100%;
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      overflow: hidden;
+    }
+
+    /* ── DECK CONTAINER ─────────────────────────────── */
+    #deck {
+      width: 100%;
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* ── SLIDE ──────────────────────────────────────── */
+    .slide {
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    /* ── BACKGROUND IMAGE ───────────────────────────── */
+    .slide__bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.04);
+      transition: transform 12s ease;
+      z-index: 0;
+    }
+    .slide:hover .slide__bg { transform: scale(1.09); }
+
+    /* ── OVERLAYS ───────────────────────────────────── */
+    .slide__overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    /* default dark bottom overlay */
+    .ov-dark-bottom {
+      background: linear-gradient(
+        to bottom,
+        rgba(7,7,9,0.1) 0%,
+        rgba(7,7,9,0.35) 35%,
+        rgba(7,7,9,0.80) 62%,
+        rgba(7,7,9,0.97) 85%,
+        #070709 100%
+      );
+    }
+
+    .ov-full { background: rgba(7,7,9,0.78); }
+    .ov-dark { background: rgba(7,7,9,0.92); }
+
+    /* ── SLIDE CONTENT ──────────────────────────────── */
+    .slide__body {
+      position: relative;
+      z-index: 10;
+      padding: 2rem 1.5rem 5.5rem;
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .slide__body--center {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding-top: 0;
+      padding-bottom: 5rem;
+    }
+
+    /* ── TYPOGRAPHY ─────────────────────────────────── */
+    .tag {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .tag--white { color: rgba(255,255,255,0.55); }
+
+    h1, h2, h3 {
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-h1 {
+      font-size: clamp(2rem, 9vw, 3.5rem);
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .hero-h2 {
+      font-size: clamp(1.65rem, 7.5vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-h3 {
+      font-size: clamp(1.3rem, 6vw, 2.2rem);
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .gold { color: var(--gold); }
+    .gold2 { color: var(--gold2); }
+    .rose { color: #f87171; }
+    .emerald { color: #6ee7b7; }
+
+    .italic-serif {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+
+    .lead {
+      font-size: clamp(0.78rem, 3.2vw, 1rem);
+      font-weight: 300;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .lead--bold {
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+    }
+
+    /* ── CARDS ──────────────────────────────────────── */
+    .card {
+      background: rgba(13,13,20,0.88);
+      border: 1px solid rgba(201,168,76,0.22);
+      border-radius: 1rem;
+      padding: 1rem 1.1rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .card--rose { border-color: rgba(248,113,113,0.3); }
+    .card--emerald { border-color: rgba(110,231,183,0.3); }
+    .card--gold { border-color: rgba(201,168,76,0.45); }
+
+    .stat-big {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 11vw, 4rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--gold);
+    }
+
+    .stat-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.1rem;
+    }
+
+    /* ── 2-col grid ─────────────────────────────────── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.55rem; }
+
+    /* ── PILL ───────────────────────────────────────── */
+    .pill {
+      display: inline-block;
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid rgba(201,168,76,0.5);
+      color: var(--gold);
+    }
+
+    .pill--filled {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
+    .pill--rose {
+      border-color: rgba(248,113,113,0.5);
+      color: #f87171;
+    }
+
+    /* ── DIVIDER ────────────────────────────────────── */
+    .divider {
+      width: 2.5rem;
+      height: 2px;
+      background: var(--gold);
+      margin: 0.85rem 0;
+    }
+    .divider--center { margin: 0.85rem auto; }
+
+    /* ── QUOTE BLOCK ────────────────────────────────── */
+    .quote-block {
+      border-left: 2px solid var(--gold);
+      padding-left: 1rem;
+      margin: 0.75rem 0;
+    }
+
+    /* ── SCRIPT BLOCK ───────────────────────────────── */
+    .script-block {
+      background: rgba(201,168,76,0.07);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 0.85rem;
+      padding: 1rem;
+      font-size: 0.72rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ── STEP NUMBER ────────────────────────────────── */
+    .step-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: rgba(201,168,76,0.15);
+      margin-bottom: -0.5rem;
+    }
+
+    /* ── PROGRESS BAR (TOP STORIES) ─────────────────── */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      display: flex;
+      gap: 3px;
+      padding: env(safe-area-inset-top, 0.5rem) 0.85rem 0.4rem;
+      background: linear-gradient(to bottom, rgba(7,7,9,0.6), transparent);
+    }
+
+    .seg {
+      flex: 1;
+      height: 2.5px;
+      border-radius: 2px;
+      background: rgba(255,255,255,0.2);
+      transition: background 0.3s;
+    }
+    .seg.done { background: var(--gold); }
+    .seg.active { background: var(--gold2); }
+
+    /* ── BOTTOM NAV ─────────────────────────────────── */
+    #bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 0.75rem 1.25rem env(safe-area-inset-bottom, 0.5rem);
+      background: linear-gradient(to top, rgba(7,7,9,0.95) 60%, transparent);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #counter {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+    }
+
+    .nav-btn {
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.35);
+      border-radius: 999px;
+      color: var(--gold);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.45rem 1.1rem;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .nav-btn--next {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--black);
+    }
+
+    /* ── LOGO MONOGRAM ──────────────────────────────── */
+    .monogram {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 1.5px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: 1rem;
+      color: var(--gold);
+      background: rgba(7,7,9,0.7);
+    }
+
+    /* ── SEPARATOR LINE ─────────────────────────────── */
+    hr.line {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 0.75rem 0;
+    }
+
+    /* ── CTA BUTTON ─────────────────────────────────── */
+    .cta-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.85rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--gold), #E8B84B);
+      color: var(--black);
+      margin-top: 0.5rem;
+    }
+
+    .cta-btn--outline {
+      background: transparent;
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold);
+    }
+
+    /* UTILITY */
+    .mb-xs { margin-bottom: 0.35rem; }
+    .mb-sm { margin-bottom: 0.65rem; }
+    .mb-md { margin-bottom: 1rem; }
+    .mb-lg { margin-bottom: 1.4rem; }
+    .mt-sm { margin-top: 0.65rem; }
+    .mt-md { margin-top: 1rem; }
+    .gap-xs { gap: 0.35rem; }
+    .gap-sm { gap: 0.65rem; }
+    .gap-md { gap: 1rem; }
+    .text-xs { font-size: 0.65rem; }
+    .text-sm { font-size: 0.72rem; }
+    .text-base { font-size: 0.82rem; }
+    .fw-bold { font-weight: 700; }
+    .fw-light { font-weight: 300; }
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .items-center { align-items: center; }
+    .gap-1 { gap: 0.25rem; }
+    .gap-2 { gap: 0.5rem; }
+    .space-y > * + * { margin-top: 0.65rem; }
+
+    .accent-line {
+      width: 1.75rem; height: 2px;
+      background: var(--gold); border-radius: 2px;
+    }
+  </style>
 </head>
-<body class="bg-black text-white">
+<body>
 
-    <!-- TOP STORY PROGRESS BARS -->
-    <div class="story-progress-bar" id="progressBarContainer">
-        <div class="progress-segment active"></div>
-        <div class="progress-segment"></div>
-        <div class="progress-segment"></div>
-        <div class="progress-segment"></div>
-        <div class="progress-segment"></div>
-        <div class="progress-segment"></div>
-        <div class="progress-segment"></div>
-        <div class="progress-segment"></div>
-        <div class="progress-segment"></div>
-        <div class="progress-segment"></div>
-    </div>
+<!-- PROGRESS BAR -->
+<div id="progress-bar"></div>
 
-    <!-- MAIN VERTICAL SNAP SCROLL CONTAINER -->
-    <main class="deck-container" id="deckContainer">
+<!-- BOTTOM NAVIGATION -->
+<div id="bottom-nav">
+  <button class="nav-btn" id="btn-prev">← Ant.</button>
+  <span id="counter">01 / 18</span>
+  <button class="nav-btn nav-btn--next" id="btn-next">Sig. →</button>
+</div>
 
-        <!-- ========================================== -->
-        <!-- SLIDE 01: LA PROVOCACIÓN (PORTADA) -->
-        <!-- ========================================== -->
-        <section class="story-slide text-center" id="slide-0">
-            <img src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg" alt="Macro Eyebrows Design" class="story-bg">
-            <div class="story-overlay"></div>
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- DECK -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="deck">
 
-            <div class="story-content">
-                <div class="inline-block px-3.5 py-1 rounded-full border border-yellow-500/60 bg-black/60 text-yellow-400 text-[10px] tracking-widest uppercase font-bold mb-4">
-                    McCann / VML Agency Pitch • 2026
-                </div>
-
-                <h1 class="hero-headline text-3xl sm:text-4xl md:text-5xl font-black text-white mb-3">
-                    NADIE COMPRA CEJAS. <br>
-                    <span class="text-gold-luxury">COMPRAN NO TENER MIEDO AL ESPEJO.</span>
-                </h1>
-
-                <p class="quote-lead text-sm sm:text-base text-slate-300 mb-6">
-                    "Cómo convertir 15 años de maestría en la marca de autor más deseada de Chile."
-                </p>
-
-                <div class="frosted-pill text-left space-y-1.5 mb-2">
-                    <div class="flex items-center justify-between text-xs">
-                        <span class="text-yellow-400 font-bold">JACQUELINE BARRAZA</span>
-                        <span class="text-[10px] text-slate-400 font-mono">Top 1% Master</span>
-                    </div>
-                    <p class="text-[11px] text-slate-300 leading-snug">
-                        1er Lugar WinArt 2026 • Speaker Henna's Day • Ex-Master PhiAcademy
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SLIDE 02: LA HERIDA (EL DATO CRUDO) -->
-        <!-- ========================================== -->
-        <section class="story-slide text-center" id="slide-1">
-            <img src="https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg" alt="Precision Caliper Measurement" class="story-bg">
-            <div class="story-overlay"></div>
-
-            <div class="story-content">
-                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">01 • La Realidad</div>
-
-                <h2 class="hero-headline text-3xl sm:text-4xl font-black text-white mb-3">
-                    1 DE CADA 3 MUJERES <br>
-                    <span class="text-rose-400">TEME QUE LE ARRUINEN LA CARA.</span>
-                </h2>
-
-                <p class="text-xs sm:text-sm text-slate-300 mb-6 leading-relaxed">
-                    El 34% de las clientas que llegan a estudios Master en Santiago buscan <strong>borrar o tapar un desastre</strong> hecho en un salón barato.
-                </p>
-
-                <div class="grid grid-cols-2 gap-3 text-left">
-                    <div class="frosted-pill">
-                        <div class="text-xl font-bold text-yellow-400 font-cinzel">$1.8B USD</div>
-                        <div class="text-[10px] text-slate-400 uppercase">Mercado Global PMU</div>
-                    </div>
-                    <div class="frosted-pill">
-                        <div class="text-xl font-bold text-emerald-400 font-cinzel">$180.000</div>
-                        <div class="text-[10px] text-slate-400 uppercase">Ticket Master Santiago</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SLIDE 03: EL INSIGHT PSICOLÓGICO -->
-        <!-- ========================================== -->
-        <section class="story-slide text-center" id="slide-2">
-            <img src="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg" alt="Intense Eyes Gaze" class="story-bg">
-            <div class="story-overlay"></div>
-
-            <div class="story-content">
-                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">02 • El Insight</div>
-
-                <h2 class="hero-headline text-3xl sm:text-4xl font-black text-white mb-3">
-                    "EL SÍNDROME DE LA <br>
-                    <span class="text-gold-luxury">CEJA DE PLUMÓN"</span>
-                </h2>
-
-                <div class="frosted-pill text-left space-y-3 mb-4">
-                    <div>
-                        <div class="text-[10px] text-yellow-400 uppercase font-mono font-bold">Lo que la clienta calla:</div>
-                        <p class="quote-lead text-xs sm:text-sm text-slate-200 mt-1">
-                            "Quiero despertar maquillada, pero me aterra que sospechen que tengo un tatuaje falso en la cara."
-                        </p>
-                    </div>
-                    <div class="border-t border-white/10 pt-2">
-                        <div class="text-[10px] text-amber-400 uppercase font-mono font-bold">Lo que la alumna teme:</div>
-                        <p class="quote-lead text-xs sm:text-sm text-slate-200 mt-1">
-                            "Hice un curso de 2 días y me da pánico cortar la piel y dejar una cicatriz permanente."
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SLIDE 04: THE BIG IDEA (EL CONCEPTO) -->
-        <!-- ========================================== -->
-        <section class="story-slide text-center" id="slide-3">
-            <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg" alt="Flawless Glowing Skin" class="story-bg">
-            <div class="story-overlay"></div>
-
-            <div class="story-content">
-                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">03 • The Big Idea</div>
-
-                <h2 class="hero-headline text-3xl sm:text-5xl font-black text-white mb-3 leading-tight">
-                    LA ALTA COSTURA <br>
-                    <span class="text-gold-luxury">DE LA MIRADA</span>
-                </h2>
-
-                <p class="quote-lead text-xs sm:text-sm text-slate-200 mb-6 italic max-w-sm mx-auto">
-                    "El verdadero lujo no es lo que se nota a diez metros. Es la armonía que nadie puede explicar."
-                </p>
-
-                <div class="frosted-pill text-center">
-                    <p class="text-[11px] text-yellow-300 font-semibold">
-                        Micro-escultura pelo a pelo con proporción áurea. Sin plantillas industriales.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SLIDE 05: NAMING & DOMINIO (LA DECISIÓN) -->
-        <!-- ========================================== -->
-        <section class="story-slide text-center" id="slide-4">
-            <img src="https://images.pexels.com/photos/3997385/pexels-photo-3997385.jpeg" alt="Master Needle Precision" class="story-bg">
-            <div class="story-overlay"></div>
-
-            <div class="story-content">
-                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">04 • Naming & SEO</div>
-
-                <h2 class="hero-headline text-2xl sm:text-4xl font-black text-white mb-3">
-                    COMPRAR <br>
-                    <span class="text-emerald-400 font-mono">jacquelinebarraza.cl</span>
-                </h2>
-
-                <div class="frosted-pill text-left space-y-2.5 mb-4">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-white">¿Por qué de inmediato?</span>
-                        <span class="text-[10px] text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 px-2 py-0.5 rounded-full font-bold">$10.990 CLP/año</span>
-                    </div>
-                    <ul class="text-[11px] text-slate-300 space-y-1.5">
-                        <li>• <strong>Cero Competencia:</strong> Es la ÚNICA Master con este nombre en Chile.</li>
-                        <li>• <strong>Desbanca Homónimos:</strong> Supera a la ex-Seremi de Educación en Google.</li>
-                        <li>• <strong>Activo Eterno:</strong> Su nombre propio es la marca de mayor valor.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SLIDE 06: CREATIVIDAD DE GUERRILLA ($0 PAUTA) -->
-        <!-- ========================================== -->
-        <section class="story-slide text-center" id="slide-5">
-            <img src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg" alt="Aquarelle Lips and Skin" class="story-bg">
-            <div class="story-overlay"></div>
-
-            <div class="story-content">
-                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">05 • Viralidad Orgánica ($0)</div>
-
-                <h2 class="hero-headline text-2xl sm:text-3xl font-black text-white mb-3">
-                    4 FORMATOS VIRALES <br>
-                    <span class="text-gold-luxury">DE ALTO IMPACTO</span>
-                </h2>
-
-                <div class="grid grid-cols-2 gap-2 text-left text-xs mb-2">
-                    <div class="frosted-pill p-3">
-                        <div class="text-rose-400 font-bold text-[11px]">1. La Autopsia</div>
-                        <p class="text-[10px] text-slate-300 mt-0.5">Por qué los pigmentos baratos se ponen grises.</p>
-                    </div>
-                    <div class="frosted-pill p-3">
-                        <div class="text-amber-400 font-bold text-[11px]">2. Compás Áureo</div>
-                        <p class="text-[10px] text-slate-300 mt-0.5">Por qué las plantillas arruinan la mirada.</p>
-                    </div>
-                    <div class="frosted-pill p-3">
-                        <div class="text-emerald-400 font-bold text-[11px]">3. Rescate Facial</div>
-                        <p class="text-[10px] text-slate-300 mt-0.5">La emoción de la clienta al verse al espejo.</p>
-                    </div>
-                    <div class="frosted-pill p-3">
-                        <div class="text-purple-400 font-bold text-[11px]">4. Reto Látex 60s</div>
-                        <p class="text-[10px] text-slate-300 mt-0.5">Trazos milimétricos que atraen alumnas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SLIDE 07: COPYWRITING & EMBAJADORAS (5%) -->
-        <!-- ========================================== -->
-        <section class="story-slide text-center" id="slide-6">
-            <img src="https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg" alt="Woman Mirror Glow" class="story-bg">
-            <div class="story-overlay"></div>
-
-            <div class="story-content">
-                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">06 • Conversión & Modelos</div>
-
-                <h2 class="hero-headline text-2xl sm:text-3xl font-black text-white mb-3">
-                    PROGRAMA <br>
-                    <span class="text-gold-luxury">"ROSTROS DE COLECCIÓN"</span>
-                </h2>
-
-                <div class="frosted-pill text-left space-y-2 mb-3">
-                    <div class="text-xs font-bold text-yellow-400">El Guion de Prestigio (5% Dscto):</div>
-                    <p class="quote-lead text-xs text-slate-200 italic">
-                        "Por la armonía de tus facciones, has sido seleccionada para nuestro portafolio de autor: recibes <strong>5% de beneficio</strong>, <strong>Kit Post-Cuidado</strong> y <strong>Perfilado a los 6 meses</strong>."
-                    </p>
-                    <div class="border-t border-white/10 pt-1 text-[10px] text-slate-400">
-                        No se ruega por fotos: es un privilegio de 5 cupos mensuales.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SLIDE 08: EL EVENTO LATEX DAY (13 SEPT) -->
-        <!-- ========================================== -->
-        <section class="story-slide text-center" id="slide-7">
-            <img src="https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg" alt="Latex Practice" class="story-bg">
-            <div class="story-overlay"></div>
-
-            <div class="story-content">
-                <div class="inline-block px-3 py-0.5 rounded-full bg-yellow-500 text-black text-[10px] font-extrabold uppercase mb-2">
-                    13 de Septiembre • Providencia
-                </div>
-
-                <h2 class="hero-headline text-2xl sm:text-4xl font-black text-white mb-2">
-                    LATEX DAY PRESENCIAL <br>
-                    <span class="text-gold-luxury">8H INTENSIVAS • $39.990</span>
-                </h2>
-
-                <div class="frosted-pill text-left space-y-2 mb-3">
-                    <p class="text-xs text-slate-200">
-                        Junto a <strong>Frainy Díaz</strong> (Efecto Polvo). Metro Pedro de Valdivia. Incluye kit y coffee break.
-                    </p>
-                    <div class="p-2 bg-black/60 rounded-lg border border-yellow-500/40 text-[11px] text-yellow-300 font-bold">
-                        💰 Payback 3x: "Con una sola clienta que cobres $120.000 recuperas 3 veces el taller."
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SLIDE 09: PAID MEDIA & ESCALA -->
-        <!-- ========================================== -->
-        <section class="story-slide text-center" id="slide-8">
-            <img src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg" alt="Scale Beauty Market" class="story-bg">
-            <div class="story-overlay"></div>
-
-            <div class="story-content">
-                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">08 • Escala Pagada (Fase 2)</div>
-
-                <h2 class="hero-headline text-2xl sm:text-3xl font-black text-white mb-3">
-                    META ADS <br>
-                    <span class="text-gold-luxury">HIPERLOCAL PROVIDENCIA</span>
-                </h2>
-
-                <div class="frosted-pill text-left text-xs space-y-2 mb-3">
-                    <p class="text-slate-300">
-                        <strong>Target:</strong> Mujeres 26-55 años en Providencia, Las Condes y Vitacura (radio 5 km).
-                    </p>
-                    <p class="text-slate-300">
-                        <strong>Creativo:</strong> Video macro del trazo en piel + Hook: "¿Miedo al microblading artificial?".
-                    </p>
-                    <div class="text-[10px] text-emerald-400 font-mono">
-                        Lead Magnet: "Diagnóstico Facial Gratuito por Foto en WhatsApp"
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SLIDE 10: EL CIERRE (LLAMADO A LA ACCIÓN) -->
-        <!-- ========================================== -->
-        <section class="story-slide text-center" id="slide-9">
-            <img src="https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg" alt="Confident Master Portrait" class="story-bg">
-            <div class="story-overlay"></div>
-
-            <div class="story-content">
-                <div class="w-12 h-12 mx-auto mb-3 rounded-full border-2 border-yellow-400 flex items-center justify-center text-yellow-400 font-cinzel font-black text-lg bg-black/70 shadow-[0_0_20px_rgba(212,175,55,0.5)]">
-                    JB
-                </div>
-
-                <h2 class="hero-headline text-2xl sm:text-4xl font-black text-white mb-3">
-                    LA MAESTRÍA YA EXISTE. <br>
-                    <span class="text-gold-luxury">AHORA CONQUISTAMOS CHILE.</span>
-                </h2>
-
-                <div class="space-y-2.5 max-w-xs mx-auto mb-4">
-                    <a href="FLUJO_DE_INFORMACION_Y_PENSAMIENTO.md" target="_blank" class="block w-full py-3 rounded-xl bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-300 text-black font-extrabold text-xs uppercase tracking-wider shadow-[0_0_25px_rgba(212,175,55,0.4)]">
-                        Ver Bitácora de Pensamiento (.md)
-                    </a>
-                    <a href="https://github.com/kulhunter/JacquelineBarraza" target="_blank" class="block w-full py-2.5 rounded-xl border border-yellow-500/40 text-yellow-300 bg-black/60 font-semibold text-xs uppercase tracking-wider">
-                        Repositorio GitHub Oficial
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- BOTTOM FLOATING NAVIGATION BAR -->
-    <nav class="bottom-nav-bar">
-        <button id="prevBtn" class="flex items-center space-x-1 text-xs text-slate-400 hover:text-white px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
-            <i data-lucide="chevron-up" class="w-4 h-4"></i>
-            <span>Ant</span>
-        </button>
-
-        <div class="text-[11px] font-mono text-yellow-400 font-bold" id="slideIndicator">
-            01 / 10
+  <!-- ─── 00 · PORTADA ────────────────────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag tag--white">Estrategia de Marca — Santiago, Chile — 2026</span>
+      <h1 class="hero-h1">
+        LA CIENCIA DE<br><span class="gold">LO IMPERCEPTIBLE</span>
+      </h1>
+      <p class="lead italic-serif mb-lg">
+        "El lujo más profundo es que la gente nunca sepa<br>que te hiciste algo."
+      </p>
+      <div class="flex items-center gap-2">
+        <div class="monogram">JB</div>
+        <div>
+          <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">Jacqueline Barraza</p>
+          <p style="font-size:0.58rem;color:rgba(255,255,255,0.45);letter-spacing:0.08em;">Studio & Master Academy · Providencia</p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <button id="nextBtn" class="flex items-center space-x-1 text-xs text-black font-bold px-4 py-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-amber-300 shadow-[0_0_15px_rgba(212,175,55,0.4)]">
-            <span>Sig</span>
-            <i data-lucide="chevron-down" class="w-4 h-4"></i>
-        </button>
-    </nav>
+  <!-- ─── 01 · EL CONTEXTO ────────────────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">01 — Contexto de Mercado</span>
+      <h2 class="hero-h2">Chile Gasta<br><span class="gold">Más en Belleza.</span><br>Y Exige Más.</h2>
+      <div class="divider"></div>
+      <p class="lead mb-md">
+        La demanda de servicios de belleza en Chile creció un <strong>32,2%</strong> en 2025. El mercado cosmético alcanzó <strong>US$442,6M</strong> con una proyección de crecimiento del <strong>10,9% anual</strong> en la próxima década.
+      </p>
+      <div class="grid-2">
+        <div class="card">
+          <div class="stat-big">24%</div>
+          <div class="stat-label">Concentración Zona Oriente<br>Las Condes · Vitacura</div>
+        </div>
+        <div class="card">
+          <div class="stat-big">60%</div>
+          <div class="stat-label">Del empleo directo<br>son mujeres</div>
+        </div>
+      </div>
+      <p style="font-size:0.58rem;color:rgba(255,255,255,0.3);margin-top:0.65rem;">Fuentes: EMOL, Cámara Cosmética de Chile, Expert Market Research 2025</p>
+    </div>
+  </section>
 
-    <!-- JS ENGINE -->
-    <script>
-        lucide.createIcons();
+  <!-- ─── 02 · LA TENSIÓN ─────────────────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">02 — La Tensión Cultural</span>
+      <h2 class="hero-h2">
+        Chile <span class="rose">Castiga</span><br>Verse Mayor.
+      </h2>
+      <div class="divider"></div>
+      <div class="space-y">
+        <div class="card card--rose">
+          <p class="text-sm fw-bold rose mb-xs">80% de las mujeres chilenas</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.75);">Siente que la sociedad castiga verse mayor. La presión es máxima entre los 30 y 50 años.</p>
+          <p style="font-size:0.55rem;color:rgba(255,255,255,0.3);margin-top:0.4rem;">Fuente: Radiografía de la Belleza y Bienestar, Cadem & Natura 2025</p>
+        </div>
+        <div class="card">
+          <p class="text-sm fw-bold gold mb-xs">83% prioriza sentirse bien</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.75);">Sobre verse bien. El cuidado personal ya no es vanidad: es identidad y bienestar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        const container = document.getElementById('deckContainer');
-        const segments = document.querySelectorAll('.progress-segment');
-        const indicator = document.getElementById('slideIndicator');
-        const totalSlides = 10;
+  <!-- ─── 03 · EL INSIGHT REAL ────────────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">03 — El Insight</span>
+      <h2 class="hero-h2">Quieren<br><span class="gold">Verse Bien.</span><br>Sin Que Se Note.</h2>
+      <div class="divider"></div>
+      <div class="quote-block mb-md">
+        <p class="italic-serif lead" style="font-size:0.85rem;">
+          "No quiero que me digan 'qué bien te quedó el microblading'. Quiero que me pregunten si me hice algo porque me veo diferente. Mejor."
+        </p>
+      </div>
+      <p class="lead">
+        La clienta de alto ticket no compra un procedimiento. Compra el poder de <strong>verse arreglada siempre</strong>, sin delatar la intervención. El enemigo no es el precio: es el miedo a lo irreversible.
+      </p>
+    </div>
+  </section>
 
-        function updateSlideState() {
-            const scrollPos = container.scrollTop;
-            const height = window.innerHeight;
-            const currentIndex = Math.round(scrollPos / height);
+  <!-- ─── 04 · EL PROBLEMA DEL MERCADO ───────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/3997385/pexels-photo-3997385.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">04 — El Problema del Mercado</span>
+      <h2 class="hero-h2">
+        El Low-Cost<br><span class="rose">Dejó Cicatrices.</span>
+      </h2>
+      <div class="divider"></div>
+      <p class="lead mb-md">
+        La proliferación de cursos exprés de 2 días creó una ola de daño real: pigmentos que viran a gris, trazos cortados en dermis profunda, diseños que no respetan la geometría del rostro.
+      </p>
+      <div class="card card--rose">
+        <p class="text-sm fw-bold rose">El efecto directo en el mercado premium:</p>
+        <p class="lead mt-sm" style="font-size:0.72rem;">
+          Las clientas que llegan a estudios Master no solo buscan un servicio. Buscan a alguien que les <strong>repare la confianza</strong> en el procedimiento.
+        </p>
+      </div>
+    </div>
+  </section>
 
-            segments.forEach((seg, i) => {
-                if (i <= currentIndex) {
-                    seg.classList.add('active');
-                } else {
-                    seg.classList.remove('active');
-                }
-            });
+  <!-- ─── 05 · LA COMPETENCIA ─────────────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">05 — Análisis Competitivo</span>
+      <h2 class="hero-h2">
+        Todas Venden<br><span class="gold">lo Mismo.</span>
+      </h2>
+      <div class="divider"></div>
+      <div class="space-y">
+        <div class="card">
+          <p class="text-xs fw-bold gold mb-xs">El Mercado Genérico</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.65);">Promociones de cupones, precios de guerra, fotos filtradas en Instagram. Sin diferencial técnico ni personal.</p>
+        </div>
+        <div class="card">
+          <p class="text-xs fw-bold" style="color:#a5b4fc;" class="mb-xs">Las Clínicas de Lujo</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.65);">Instalaciones caras, técnicos rotativos anónimos. El cliente paga por el espacio, no por la mano.</p>
+        </div>
+        <div class="card card--gold">
+          <p class="text-xs fw-bold gold mb-xs">La Oportunidad de Jacqueline</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.85);">Nadie en Santiago es <strong>Campeona verificada + Master + Speaker activo</strong>. Su nombre es único en el rubro en todo Chile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            const currentNumber = String(Math.min(currentIndex + 1, totalSlides)).padStart(2, '0');
-            indicator.textContent = `${currentNumber} / 10`;
-        }
+  <!-- ─── 06 · THE BIG IDEA ───────────────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body slide__body--center">
+      <span class="tag" style="text-align:center;">06 — El Concepto Central</span>
+      <h1 class="hero-h1" style="text-align:center;font-size:clamp(2.2rem,10vw,4rem);">
+        LA ALTA COSTURA<br><span class="gold">DE LA MIRADA</span>
+      </h1>
+      <div class="divider divider--center"></div>
+      <p class="italic-serif lead" style="text-align:center;max-width:400px;">
+        "Cada rostro es único. Cada trazo, una decisión. No hay plantillas, no hay fórmulas. Solo la proporción áurea, la piel viva y 15 años de maestría."
+      </p>
+    </div>
+  </section>
 
-        container.addEventListener('scroll', updateSlideState);
+  <!-- ─── 07 · NAMING & DOMINIO ───────────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">07 — Naming & Marca</span>
+      <h2 class="hero-h2">Su nombre<br><span class="gold">es la marca.</span></h2>
+      <div class="divider"></div>
+      <p class="lead mb-md">
+        Investigación exhaustiva: no existe ninguna otra <strong>Jacqueline Barraza en Chile</strong> en el rubro de la belleza o micropigmentación. El nombre es libre y poderoso.
+      </p>
+      <div class="card card--gold mb-sm">
+        <div class="flex items-center" style="justify-content:space-between;margin-bottom:0.4rem;">
+          <span style="font-family:'Montserrat';font-weight:700;font-size:0.75rem;color:var(--gold2);">jacquelinebarraza.cl</span>
+          <span class="pill" style="font-size:0.55rem;padding:0.2rem 0.6rem;">Disponible</span>
+        </div>
+        <p class="text-xs" style="color:rgba(255,255,255,0.7);">$10.990 CLP/año en NIC Chile. Activo defensivo inmediato. Dominio de autoridad personal de por vida.</p>
+      </div>
+      <div class="card">
+        <p class="text-xs fw-bold mb-xs">Sistema de Marca</p>
+        <p class="text-xs" style="color:rgba(255,255,255,0.65);">
+          <strong style="color:var(--gold);">JB Signature</strong> → Procedimientos de autor<br>
+          <strong style="color:var(--gold);">JB Academy</strong> → Formación y Mentorías<br>
+          <strong style="color:var(--gold);">JB Paramedical</strong> → Areolas y Camuflaje
+        </p>
+      </div>
+    </div>
+  </section>
 
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            const height = window.innerHeight;
-            container.scrollBy({ top: height, behavior: 'smooth' });
-        });
+  <!-- ─── 08 · SEO & POSICIONAMIENTO DIGITAL ──────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">08 — SEO & Autoridad Digital</span>
+      <h2 class="hero-h2">Invisible en<br><span class="rose">Google.</span><br>Eso cambia hoy.</h2>
+      <div class="divider"></div>
+      <div class="space-y">
+        <div class="card card--rose">
+          <p class="text-xs fw-bold rose mb-xs">El Problema Actual</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.7);">Búsqueda "microblading providencia santiago" → Jacqueline no aparece. La ex-Seremi de Educación le gana posiciones en Google.</p>
+        </div>
+        <div class="card card--emerald">
+          <p class="text-xs fw-bold emerald mb-xs">La Solución Inmediata</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.7);">
+            Schema.org (BeautySalon + Person) · Google Business Profile optimizado · Páginas pilares:
+            <span style="color:var(--gold2);font-family:monospace;font-size:0.6rem;">/microblading-providencia</span> ·
+            <span style="color:var(--gold2);font-family:monospace;font-size:0.6rem;">/curso-microblading-latex</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            const height = window.innerHeight;
-            container.scrollBy({ top: -height, behavior: 'smooth' });
-        });
+  <!-- ─── 09 · CONTENIDO ORGÁNICO (IDEAS CREATIVAS) ─ -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">09 — Contenido Orgánico ($0)</span>
+      <h2 class="hero-h2">Cuatro Formatos.<br><span class="gold">Un Imán.</span></h2>
+      <div class="divider"></div>
+      <div class="space-y">
+        <div class="card">
+          <div class="flex gap-2 items-center">
+            <div class="accent-line"></div>
+            <p class="text-xs fw-bold">La Autopsia de la Ceja</p>
+          </div>
+          <p class="text-xs" style="color:rgba(255,255,255,0.6);margin-top:0.3rem;">Macro de aguja. Jacqueline explica por qué los pigmentos baratos viran a gris. Educación como autoridad.</p>
+        </div>
+        <div class="card">
+          <div class="flex gap-2 items-center">
+            <div class="accent-line"></div>
+            <p class="text-xs fw-bold">El Compás Áureo en Tu Rostro</p>
+          </div>
+          <p class="text-xs" style="color:rgba(255,255,255,0.6);margin-top:0.3rem;">Mide en vivo cómo ningún rostro es simétrico y por qué las plantillas de salón destruyen la expresión natural.</p>
+        </div>
+        <div class="card">
+          <div class="flex gap-2 items-center">
+            <div class="accent-line"></div>
+            <p class="text-xs fw-bold">Rescate Facial: el Espejo</p>
+          </div>
+          <p class="text-xs" style="color:rgba(255,255,255,0.6);margin-top:0.3rem;">45 segundos de la emoción real de una clienta que llegó con un trabajo dañado. Sin música dramática. Sin filtros.</p>
+        </div>
+        <div class="card">
+          <div class="flex gap-2 items-center">
+            <div class="accent-line"></div>
+            <p class="text-xs fw-bold">El Reto del Látex en 60 Segundos</p>
+          </div>
+          <p class="text-xs" style="color:rgba(255,255,255,0.6);margin-top:0.3rem;">Trazos milimétricos en látex con cronómetro. El imán más directo para alumnas que quieren aprender.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            const height = window.innerHeight;
-            if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
-                container.scrollBy({ top: height, behavior: 'smooth' });
-            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                container.scrollBy({ top: -height, behavior: 'smooth' });
-            }
-        });
-    </script>
+  <!-- ─── 10 · JORNADA 15 SEPT: PLAN DE RODAJE ───── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">10 — Jornada de Grabación · 15 Sept</span>
+      <h2 class="hero-h2">Un Día.<br><span class="gold">Todo el Año.</span></h2>
+      <div class="divider"></div>
+      <p class="lead mb-md">
+        Jornada de contenido en el estudio de Jacqueline. iPhone 17 Pro, luz natural + un reflector, látex de práctica y ella hablando directo a cámara. Sin modelo.
+      </p>
+      <div class="space-y">
+        <div class="card">
+          <p class="text-xs fw-bold gold mb-xs">🎬 Piezas a Grabar</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.75);line-height:1.7;">
+            1. <strong>Manifiesto de Marca:</strong> Jacqueline habla 90 segundos a cámara. Sin leer. Sin guion rígido.<br>
+            2. <strong>3× La Autopsia:</strong> Macro de aguja en látex + voz en off explicando el error técnico.<br>
+            3. <strong>El Compás Áureo:</strong> Ella mide en espejo, muestra la asimetría natural del rostro.<br>
+            4. <strong>ASMR de Trazos:</strong> Solo las manos, el sonido de la aguja, plano cerrado. Sin palabras.<br>
+            5. <strong>2× Pieza Educativa:</strong> "¿Por qué tus cejas duran 3 semanas?" y "Cómo elegir un Master."<br>
+            6. <strong>Detrás del Studio:</strong> Tour del espacio, herramientas y proceso de esterilización.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 11 · PLAN DE RODAJE: TÉCNICA ───────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/3997385/pexels-photo-3997385.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">11 — Técnica de Grabación · iPhone 17 Pro</span>
+      <h2 class="hero-h2">Producción<br><span class="gold">de Autor.</span></h2>
+      <div class="divider"></div>
+      <div class="space-y">
+        <div class="card">
+          <p class="text-xs fw-bold gold mb-xs">Configuración Recomendada</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.75);line-height:1.7;">
+            • <strong>Formato:</strong> ProRes 4K · 24fps (cinematográfico)<br>
+            • <strong>Lente:</strong> Teleobjetivo 5× para macros de aguja<br>
+            • <strong>Luz:</strong> Ventana a contraluz + reflector en oro/blanco<br>
+            • <strong>Audio:</strong> Micrófono de solapa o DJI Mic Mini<br>
+            • <strong>Plano Jacqueline:</strong> Siempre a la altura de los ojos, nunca picado
+          </p>
+        </div>
+        <div class="card">
+          <p class="text-xs fw-bold gold mb-xs">Paleta Visual de la Marca</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.75);">
+            Fondos oscuros (negro o pizarra), luz cálida dorada lateral, planos muy cerrados. Estética clínica + artesanal. Nada de filtros de belleza.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 12 · PROPUESTA WEB ─────────────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">12 — Propuesta Web</span>
+      <h2 class="hero-h2">
+        jacquelinebarraza.cl<br><span class="gold">No es un Menú.</span><br>Es un Embudo.
+      </h2>
+      <div class="divider"></div>
+      <p class="lead mb-md">
+        El sitio convierte visitas en reservas y alumnas. Una sola página, tres objetivos: <strong>Autoridad → Confianza → Acción.</strong>
+      </p>
+      <div class="space-y">
+        <div class="card">
+          <p class="text-xs" style="color:rgba(255,255,255,0.8);line-height:1.7;">
+            <strong style="color:var(--gold);">Hero:</strong> Video manifiesto con Jacqueline hablando. Nada de fotos genéricas.<br>
+            <strong style="color:var(--gold);">Prueba Social:</strong> WinArt 2026 · Henna's Day · PhiAcademy<br>
+            <strong style="color:var(--gold);">Servicios:</strong> Cards visuales por categoría con foto real<br>
+            <strong style="color:var(--gold);">Diagnóstico:</strong> Botón directo a WhatsApp + pregunta filtro<br>
+            <strong style="color:var(--gold);">Academia:</strong> Próximos eventos y preventa integrada
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 13 · MODELO DE ADQUISICIÓN: CLIENTAS ────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">13 — Adquisición de Clientas</span>
+      <h2 class="hero-h2">
+        Del Reel<br><span class="gold">a la Cita.</span>
+      </h2>
+      <div class="divider"></div>
+      <div class="space-y">
+        <div class="card">
+          <div class="step-num">01</div>
+          <p class="text-xs fw-bold mb-xs">Contenido Orgánico</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.65);">Reel viral (Autopsia / ASMR / Rescate Facial) → Seguidoras con intención de compra llegan solas.</p>
+        </div>
+        <div class="card">
+          <div class="step-num">02</div>
+          <p class="text-xs fw-bold mb-xs">Diagnóstico por Foto (WhatsApp)</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.65);">Lead magnet gratuito. Jacqueline evalúa y recomienda la técnica exacta. El 70% de quienes reciben una evaluación personal agendan.</p>
+        </div>
+        <div class="card">
+          <div class="step-num">03</div>
+          <p class="text-xs fw-bold mb-xs">Reserva con Abono ($20.000)</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.65);">El abono elimina el ausentismo. La clienta ya tiene comprometida su cita.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 14 · PROGRAMA EMBAJADORAS ─────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">14 — Modelos de Portafolio (5% Beneficio)</span>
+      <h2 class="hero-h2">
+        No es un<br><span class="gold">descuento.</span><br>Es una selección.
+      </h2>
+      <div class="divider"></div>
+      <div class="script-block mb-md">
+        <p style="color:var(--gold2);font-size:0.65rem;font-weight:700;margin-bottom:0.4rem;">EL GUION EXACTO</p>
+        <p>"[Nombre], por la morfología de tus cejas y tu tipo de piel, Jacqueline quiere incluirte en su Colección de Rostros 2026. Serías fotografiada en proceso con cámara macro para nuestro portafolio oficial. A cambio: 5% de beneficio directo + Kit Post-Cuidado + Perfilado gratuito a los 6 meses. Cupos: 5 al mes."</p>
+      </div>
+      <div class="card">
+        <p class="text-xs" style="color:rgba(255,255,255,0.7);">El beneficio económico es el menos importante. El poder real es que la clienta <strong>se siente elegida</strong>, no descuentada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 15 · LATEX DAY 13 SEPT ─────────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <div class="pill pill--filled mb-md" style="font-size:0.58rem;">13 Septiembre · Providencia · Metro P. de Valdivia</div>
+      <h2 class="hero-h2">
+        Latex Day<br><span class="gold">8 Horas.<br>0 Teoría.</span>
+      </h2>
+      <div class="divider"></div>
+      <div class="script-block mb-sm">
+        <p style="color:var(--gold2);font-size:0.65rem;font-weight:700;margin-bottom:0.4rem;">EL ARGUMENTO DE VENTA (Literal)</p>
+        <p>"¿Cuántos cursos pagaste donde te enseñaron a practicar en papel y a casa te dio miedo tocar piel real? Este taller no tiene pizarrón. Tiene látex de alto rendimiento, la mano de Jacqueline corrigiéndote en vivo y 8 horas de práctica intensiva. Valor preventa: $39.990. Una clienta que cobres $120.000 te lo paga 3 veces el mismo día."</p>
+      </div>
+      <div class="flex" style="justify-content:space-between;align-items:flex-end;">
+        <div>
+          <div class="stat-big" style="font-size:2.5rem;">$39.990</div>
+          <div class="stat-label">Preventa · Cupos Limitados</div>
+        </div>
+        <div class="card" style="text-align:right;padding:0.6rem 0.85rem;">
+          <p class="text-xs" style="color:var(--gold);">Con Frainy Díaz</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.55);">Especialista Efecto Polvo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 16 · PAID MEDIA (ETAPA 2) ──────────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">16 — Inversión en Medios (Etapa 2)</span>
+      <h2 class="hero-h2">
+        Orgánico primero.<br><span class="gold">Pauta cuando<br>ya funciona.</span>
+      </h2>
+      <div class="divider"></div>
+      <p class="lead mb-md">
+        Solo se amplifica lo que ya funciona de forma orgánica. El contenido que demuestre mayor retención se convierte en anuncio.
+      </p>
+      <div class="space-y">
+        <div class="card">
+          <p class="text-xs fw-bold gold mb-xs">Meta Ads Hiperlocal</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.7);">Mujeres 28–52 años, radio 5km desde Providencia. Objetivo: leads de WhatsApp. Creativo: video del ASMR de trazos con gancho clínico.</p>
+        </div>
+        <div class="card">
+          <p class="text-xs fw-bold gold mb-xs">Retargeting Educativo</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.7);">Quienes vieron el Reel de la Autopsia reciben el anuncio del Latex Day 72 horas después.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 17 · CIERRE & PRÓXIMOS PASOS ───────────── -->
+  <section class="slide">
+    <div class="slide__bg" style="background-image:url('https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg')"></div>
+    <div class="slide__overlay ov-dark-bottom"></div>
+    <div class="slide__body">
+      <span class="tag">17 — Próximos Pasos</span>
+      <h2 class="hero-h2">
+        La maestría<br><span class="gold">ya existe.</span>
+      </h2>
+      <div class="divider"></div>
+      <div class="space-y mb-md">
+        <div class="card">
+          <p class="text-xs" style="color:rgba(255,255,255,0.85);line-height:1.8;">
+            <strong style="color:var(--gold);">Esta semana:</strong> Comprar jacquelinebarraza.cl<br>
+            <strong style="color:var(--gold);">13 Sept:</strong> Ejecutar Latex Day (Preventa activa ya)<br>
+            <strong style="color:var(--gold);">15 Sept:</strong> Jornada de grabación en estudio<br>
+            <strong style="color:var(--gold);">Semana 3:</strong> Lanzar contenido orgánico semanal<br>
+            <strong style="color:var(--gold);">Mes 2:</strong> Activar pauta con el mejor reel producido
+          </p>
+        </div>
+      </div>
+      <a href="FLUJO_DE_INFORMACION_Y_PENSAMIENTO.md" target="_blank" class="cta-btn">
+        Ver Bitácora de Pensamiento Completa
+      </a>
+      <a href="https://github.com/kulhunter/JacquelineBarraza" target="_blank" class="cta-btn cta-btn--outline mt-sm" style="margin-top:0.5rem;display:block;text-align:center;padding:0.75rem;border-radius:0.75rem;font-size:0.63rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(201,168,76,0.4);color:var(--gold);">
+        Repositorio GitHub
+      </a>
+    </div>
+  </section>
+
+</div><!-- /deck -->
+
+<script>
+  const deck    = document.getElementById('deck');
+  const counter = document.getElementById('counter');
+  const progBar = document.getElementById('progress-bar');
+  const TOTAL   = document.querySelectorAll('.slide').length;
+  let current   = 0;
+
+  // Build progress segments
+  for (let i = 0; i < TOTAL; i++) {
+    const seg = document.createElement('div');
+    seg.className = 'seg' + (i === 0 ? ' active' : '');
+    progBar.appendChild(seg);
+  }
+
+  function updateUI(idx) {
+    current = Math.max(0, Math.min(TOTAL - 1, idx));
+    counter.textContent = String(current + 1).padStart(2,'0') + ' / ' + String(TOTAL).padStart(2,'0');
+    document.querySelectorAll('.seg').forEach((s, i) => {
+      s.className = 'seg' + (i < current ? ' done' : i === current ? ' active' : '');
+    });
+  }
+
+  function goTo(idx) {
+    const slide = document.querySelectorAll('.slide')[idx];
+    if (slide) {
+      deck.scrollTo({ top: slide.offsetTop, behavior: 'smooth' });
+    }
+  }
+
+  deck.addEventListener('scroll', () => {
+    const h = window.innerHeight;
+    const idx = Math.round(deck.scrollTop / h);
+    updateUI(idx);
+  }, { passive: true });
+
+  document.getElementById('btn-next').addEventListener('click', () => goTo(current + 1));
+  document.getElementById('btn-prev').addEventListener('click', () => goTo(current - 1));
+
+  document.addEventListener('keydown', e => {
+    if (['ArrowDown','ArrowRight','Space'].includes(e.key)) { e.preventDefault(); goTo(current + 1); }
+    if (['ArrowUp','ArrowLeft'].includes(e.key))            { e.preventDefault(); goTo(current - 1); }
+  });
+
+  // Touch swipe
+  let touchY = 0;
+  deck.addEventListener('touchstart', e => { touchY = e.touches[0].clientY; }, { passive: true });
+  deck.addEventListener('touchend',   e => {
+    const dy = touchY - e.changedTouches[0].clientY;
+    if (Math.abs(dy) > 40) goTo(current + (dy > 0 ? 1 : -1));
+  }, { passive: true });
+
+  updateUI(0);
+</script>
 </body>
 </html>
