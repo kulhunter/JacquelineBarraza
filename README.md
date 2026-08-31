@@ -1,15 +1,10 @@
 # Jacqueline Barraza | Strategic Brand & Growth Blueprint 2026
-### Agencia de Estrategia & Posicionamiento (Estilo McCann / VML / Wunderman Thompson)
+### Agencia de Estrategia & Posicionamiento 
 
 Repositorio oficial del Plan Estratégico Integral para **Jacqueline Barraza**, Master & Artista Internacional de Micropigmentación.
 
 ---
 
-## 📌 Acceso Rápido
-*   🌐 **Presentación Interactiva en Vivo:** Abre `index.html` en tu navegador o visualízalo a través de GitHub Pages.
-*   📄 **Bitácora de Pensamiento Estratégico:** Consulta [`FLUJO_DE_INFORMACION_Y_PENSAMIENTO.md`](./FLUJO_DE_INFORMACION_Y_PENSAMIENTO.md) para revisar cada deducción, cálculo de mercado y arquitectura de embudos.
-
----
 
 ## 🎯 Resumen Ejecutivo
 
