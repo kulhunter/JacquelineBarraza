@@ -1,9 +1,10 @@
-/* Custom Styling for Jacqueline Barraza Master Deck */
+/* Agency Deck Engine & Luxury Visual Styling (McCann / VML / Wunderman Thompson Style) */
 
 :root {
     --gold-primary: #C5A04D;
     --gold-light: #E6CA85;
     --gold-dark: #8E6E27;
+    --gold-glow: rgba(197, 160, 77, 0.4);
     --obsidian-dark: #07080B;
     --obsidian-card: #0D0F17;
 }
@@ -11,42 +12,155 @@
 body {
     background-color: var(--obsidian-dark);
     color: #E2E8F0;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
-
 ::-webkit-scrollbar-track {
     background: #07080B;
 }
-
 ::-webkit-scrollbar-thumb {
-    background: #2A3042;
-    border-radius: 4px;
-    border: 1px solid rgba(197, 160, 77, 0.2);
+    background: #232736;
+    border-radius: 3px;
+    border: 1px solid rgba(197, 160, 77, 0.3);
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: #C5A04D;
 }
 
-/* Smooth Transitions */
-a, button {
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+/* Slide Deck Styling */
+.slide-card {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 6rem 1.5rem 4rem 1.5rem;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(197, 160, 77, 0.15);
 }
 
-/* Text glow effects */
-.gold-glow {
-    text-shadow: 0 0 20px rgba(197, 160, 77, 0.4);
+@media (min-width: 1024px) {
+    .slide-card {
+        padding: 7rem 3rem 5rem 3rem;
+    }
 }
 
-/* Glassmorphic Cards */
-.glass-panel {
-    background: rgba(13, 15, 23, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(197, 160, 77, 0.15);
+/* Background Image Zoom / Parallax Effect */
+.slide-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.25) contrast(1.15) saturate(1.1);
+    transform: scale(1.03);
+    transition: transform 10s ease-out;
+    z-index: 0;
+}
+
+.slide-card:hover .slide-bg-img {
+    transform: scale(1.08);
+}
+
+/* Vignette & Gradient Overlays */
+.slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(7, 8, 11, 0.5) 0%, rgba(7, 8, 11, 0.92) 80%, #07080B 100%);
+    z-index: 1;
+}
+
+.slide-content {
+    position: relative;
+    z-index: 10;
+    max-width: 72rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Editorial Typography */
+.agency-title {
+    font-family: 'Cinzel', serif;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+
+.agency-lead {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Gold Text Gradients */
+.text-gold-gradient {
+    background: linear-gradient(135deg, #F9F1DC 0%, #D4AF37 50%, #AA820A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphic Agency Cards */
+.agency-card {
+    background: rgba(13, 15, 23, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(197, 160, 77, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agency-card:hover {
+    border-color: rgba(197, 160, 77, 0.6);
+    box-shadow: 0 25px 60px rgba(197, 160, 77, 0.15);
+    transform: translateY(-3px);
+}
+
+/* Slide Indicator Dots */
+.dot-nav {
+    position: fixed;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.dot-nav-item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(197, 160, 77, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot-nav-item:hover, .dot-nav-item.active {
+    background: #C5A04D;
+    box-shadow: 0 0 12px #C5A04D;
+    transform: scale(1.3);
+}
+
+/* Interactive Image Frames */
+.cinematic-frame {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(197, 160, 77, 0.3);
+}
+
+.cinematic-frame img {
+    transition: transform 0.8s ease;
+}
+
+.cinematic-frame:hover img {
+    transform: scale(1.05);
 }
