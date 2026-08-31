@@ -1,635 +1,403 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacqueline Barraza | The Master Pitch Deck • McCann / VML Standard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jacqueline Barraza | The Master Story Deck</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,600;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-                        cinzel: ['"Cinzel"', 'serif'],
-                        sans: ['"Montserrat"', 'sans-serif'],
-                    },
-                    colors: {
-                        gold: {
-                            50: '#FDFBF7',
-                            100: '#F7F3E8',
-                            200: '#EDE2C8',
-                            300: '#DFCDA0',
-                            400: '#D1B474',
-                            500: '#C5A04D',
-                            600: '#A98438',
-                            700: '#876728',
-                            800: '#684E1F',
-                            900: '#4D3917',
-                            DEFAULT: '#C5A04D',
-                            light: '#E6CA85',
-                            dark: '#8E6E27'
-                        },
-                        obsidian: {
-                            950: '#040507',
-                            900: '#07080B',
-                            800: '#0D0F17',
-                            700: '#161925',
-                            600: '#212637',
-                            DEFAULT: '#07080B'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-obsidian-950 text-slate-100 font-sans antialiased selection:bg-gold-500 selection:text-obsidian-950">
+<body class="bg-black text-white">
 
-    <!-- GLOBAL HUD / HEADER -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-obsidian-950/85 backdrop-blur-xl border-b border-gold-500/20 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full border-2 border-gold-400 flex items-center justify-center bg-obsidian-900 text-gold-400 font-cinzel font-black text-base shadow-[0_0_20px_rgba(197,160,77,0.4)]">
-                    JB
-                </div>
-                <div>
-                    <span class="font-cinzel tracking-widest text-sm lg:text-base font-bold text-white block">JACQUELINE BARRAZA</span>
-                    <span class="text-[10px] tracking-widest text-gold-400 uppercase block font-semibold">Master Pitch Deck • Strategic Agency Blueprint</span>
-                </div>
-            </div>
-
-            <!-- Fast Navigation Anchor Menu -->
-            <nav class="hidden xl:flex items-center space-x-6 text-[11px] tracking-widest uppercase font-semibold text-slate-300">
-                <a href="#slide-01" class="hover:text-gold-400 transition-colors">1. Portada</a>
-                <a href="#slide-02" class="hover:text-gold-400 transition-colors">2. La Realidad</a>
-                <a href="#slide-03" class="hover:text-gold-400 transition-colors">3. El Insight</a>
-                <a href="#slide-04" class="hover:text-gold-400 transition-colors">4. The Big Idea</a>
-                <a href="#slide-05" class="hover:text-gold-400 transition-colors">5. Nombre & Dominio</a>
-                <a href="#slide-06" class="hover:text-gold-400 transition-colors">6. Guerrilla $0</a>
-                <a href="#slide-07" class="hover:text-gold-400 transition-colors">7. Copywriting</a>
-                <a href="#slide-08" class="hover:text-gold-400 transition-colors">8. Latex Day</a>
-                <a href="#slide-09" class="hover:text-gold-400 transition-colors">9. Paid Scale</a>
-            </nav>
-
-            <div class="flex items-center space-x-3">
-                <a href="FLUJO_DE_INFORMACION_Y_PENSAMIENTO.md" target="_blank" class="hidden sm:flex items-center space-x-1.5 text-xs border border-gold-500/40 hover:bg-gold-500/10 px-3.5 py-1.5 rounded-full text-gold-300 transition-all font-mono">
-                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-                    <span>Bitácora .md</span>
-                </a>
-                <a href="https://github.com/kulhunter/JacquelineBarraza" target="_blank" class="inline-flex items-center space-x-1.5 text-xs font-bold bg-gradient-to-r from-gold-500 to-amber-300 text-obsidian-950 px-4 py-1.5 rounded-full shadow-[0_0_20px_rgba(197,160,77,0.4)] hover:scale-105 transition-all">
-                    <i data-lucide="github" class="w-3.5 h-3.5"></i>
-                    <span>GitHub Repo</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- RIGHT DOT NAVIGATION -->
-    <div class="dot-nav hidden md:flex">
-        <a href="#slide-01" class="dot-nav-item active" title="01. Portada"></a>
-        <a href="#slide-02" class="dot-nav-item" title="02. La Realidad"></a>
-        <a href="#slide-03" class="dot-nav-item" title="03. El Insight"></a>
-        <a href="#slide-04" class="dot-nav-item" title="04. The Big Idea"></a>
-        <a href="#slide-05" class="dot-nav-item" title="05. Naming & Dominio"></a>
-        <a href="#slide-06" class="dot-nav-item" title="06. Guerrilla $0"></a>
-        <a href="#slide-07" class="dot-nav-item" title="07. Copywriting Scripts"></a>
-        <a href="#slide-08" class="dot-nav-item" title="08. Latex Day"></a>
-        <a href="#slide-09" class="dot-nav-item" title="09. Paid Media & Cierre"></a>
+    <!-- TOP STORY PROGRESS BARS -->
+    <div class="story-progress-bar" id="progressBarContainer">
+        <div class="progress-segment active"></div>
+        <div class="progress-segment"></div>
+        <div class="progress-segment"></div>
+        <div class="progress-segment"></div>
+        <div class="progress-segment"></div>
+        <div class="progress-segment"></div>
+        <div class="progress-segment"></div>
+        <div class="progress-segment"></div>
+        <div class="progress-segment"></div>
+        <div class="progress-segment"></div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 01: PORTADA MONUMENTAL & THE MANIFESTO -->
-    <!-- ========================================== -->
-    <section id="slide-01" class="slide-card text-center">
-        <!-- Cinematic Background Image (Pexels Beauty Macro) -->
-        <img src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg" alt="Macro Eyebrows Design" class="slide-bg-img">
-        <div class="slide-overlay"></div>
+    <!-- MAIN VERTICAL SNAP SCROLL CONTAINER -->
+    <main class="deck-container" id="deckContainer">
 
-        <div class="slide-content">
-            <!-- Super Badge -->
-            <div class="inline-flex items-center space-x-2 border border-gold-400/50 bg-gold-950/60 backdrop-blur-md px-5 py-2 rounded-full text-gold-300 text-xs tracking-widest uppercase font-bold mb-8 shadow-[0_0_30px_rgba(197,160,77,0.3)]">
-                <i data-lucide="crown" class="w-4 h-4 text-gold-400"></i>
-                <span>Agencia McCann / VML Standard • Strategic Deck 2026</span>
-            </div>
+        <!-- ========================================== -->
+        <!-- SLIDE 01: LA PROVOCACIÓN (PORTADA) -->
+        <!-- ========================================== -->
+        <section class="story-slide text-center" id="slide-0">
+            <img src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg" alt="Macro Eyebrows Design" class="story-bg">
+            <div class="story-overlay"></div>
 
-            <!-- Massive Punchy Headline -->
-            <h1 class="agency-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white max-w-5xl mx-auto mb-6 leading-none">
-                LA CIENCIA DE LO <br>
-                <span class="text-gold-gradient">IMPERCEPTIBLE</span>
-            </h1>
-
-            <p class="agency-lead text-lg sm:text-2xl md:text-3xl text-slate-200 italic max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-                "Cómo transformar 15 años de maestría técnica en la marca de micropigmentación más respetada y deseada de Chile."
-            </p>
-
-            <!-- 4 Authority Badges Centered -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
-                <div class="agency-card p-4 rounded-2xl text-center">
-                    <div class="text-2xl lg:text-3xl font-cinzel font-black text-gold-400">15 Años</div>
-                    <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold">Artesanía en Belleza</div>
-                </div>
-                <div class="agency-card p-4 rounded-2xl text-center">
-                    <div class="text-2xl lg:text-3xl font-cinzel font-black text-gold-400">1er Lugar</div>
-                    <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold">Campeona WinArt 2026</div>
-                </div>
-                <div class="agency-card p-4 rounded-2xl text-center">
-                    <div class="text-2xl lg:text-3xl font-cinzel font-black text-gold-400">Speaker</div>
-                    <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold">Henna's Day Chile</div>
-                </div>
-                <div class="agency-card p-4 rounded-2xl text-center">
-                    <div class="text-2xl lg:text-3xl font-cinzel font-black text-gold-400">Ex-Master</div>
-                    <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold">PhiAcademy Chile</div>
-                </div>
-            </div>
-
-            <!-- Scroll Action -->
-            <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-gold-400 font-bold animate-bounce">
-                <span>Desliza para comenzar el pitch</span>
-                <i data-lucide="arrow-down" class="w-4 h-4"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SLIDE 02: LA REALIDAD QUE NADIE DICE (DIAGNÓSTICO) -->
-    <!-- ========================================== -->
-    <section id="slide-02" class="slide-card">
-        <img src="https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg" alt="Precision Microblading Treatment" class="slide-bg-img">
-        <div class="slide-overlay"></div>
-
-        <div class="slide-content text-center">
-            <div class="text-gold-400 text-xs uppercase tracking-widest font-mono font-bold mb-3">Acto 01 • El Diagnóstico Crudo</div>
-            
-            <h2 class="agency-title text-3xl sm:text-5xl md:text-6xl font-extrabold text-white max-w-4xl mx-auto mb-6">
-                EL MERCADO NO VENDE CEJAS. <br>
-                <span class="text-gold-gradient">VENDE AUTOESTIMA Y TIEMPO.</span>
-            </h2>
-
-            <p class="text-slate-300 text-base md:text-xl max-w-3xl mx-auto mb-12 font-light leading-relaxed">
-                El 90% de los centros en Santiago compiten como salones de barrio: con cupones, descuentos desesperados y fotos genéricas. Pero la micropigmentación no es un corte de pelo: <strong>es una alteración semi-permanente en el centro de tu identidad visual.</strong>
-            </p>
-
-            <!-- 3 Hard Truths Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
-                <div class="agency-card p-6 rounded-3xl border-l-4 border-gold-400">
-                    <div class="text-3xl font-cinzel font-black text-gold-400 mb-2">$1.8B USD</div>
-                    <h3 class="text-white font-bold text-base mb-1">Mercado Global en Expansión</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Crecimiento del 8.2% anual hacia 2033. El 58.4% del volumen mundial corresponde a tratamientos de cejas y mirada.
-                    </p>
+            <div class="story-content">
+                <div class="inline-block px-3.5 py-1 rounded-full border border-yellow-500/60 bg-black/60 text-yellow-400 text-[10px] tracking-widest uppercase font-bold mb-4">
+                    McCann / VML Agency Pitch • 2026
                 </div>
 
-                <div class="agency-card p-6 rounded-3xl border-l-4 border-rose-500">
-                    <div class="text-3xl font-cinzel font-black text-rose-400 mb-2">34%</div>
-                    <h3 class="text-white font-bold text-base mb-1">El Trauma del "Low-Cost"</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        1 de cada 3 clientas que llegan a estudios de Master en Santiago buscan corregir o borrar una mala micropigmentación previa.
-                    </p>
-                </div>
+                <h1 class="hero-headline text-3xl sm:text-4xl md:text-5xl font-black text-white mb-3">
+                    NADIE COMPRA CEJAS. <br>
+                    <span class="text-gold-luxury">COMPRAN NO TENER MIEDO AL ESPEJO.</span>
+                </h1>
 
-                <div class="agency-card p-6 rounded-3xl border-l-4 border-emerald-400">
-                    <div class="text-3xl font-cinzel font-black text-emerald-400 mb-2">$180.000+</div>
-                    <h3 class="text-white font-bold text-base mb-1">El Ticket de Autoridad</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Una clienta en Providencia o Las Condes no busca lo más barato: busca a quien le garantice que su rostro no será arruinado.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SLIDE 03: EL INSIGHT & LA TENSIÓN CULTURAL -->
-    <!-- ========================================== -->
-    <section id="slide-03" class="slide-card">
-        <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg" alt="Woman Facial Beauty Portrait" class="slide-bg-img">
-        <div class="slide-overlay"></div>
-
-        <div class="slide-content">
-            <div class="text-center mb-12">
-                <div class="text-gold-400 text-xs uppercase tracking-widest font-mono font-bold mb-3">Acto 02 • La Psicología Oculta</div>
-                <h2 class="agency-title text-3xl sm:text-5xl md:text-6xl font-black text-white max-w-4xl mx-auto">
-                    EL MIEDO VISCERAL A LA <br>
-                    <span class="text-gold-gradient">"CEJA DE PLUMÓN PERMANENTE"</span>
-                </h2>
-            </div>
-
-            <!-- Two Tension Dual Cards -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Tension 1 -->
-                <div class="agency-card p-8 rounded-3xl relative overflow-hidden">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-mono uppercase text-gold-400 tracking-wider">Tensión de la Clienta</span>
-                        <i data-lucide="shield-alert" class="w-5 h-5 text-gold-400"></i>
-                    </div>
-                    <h3 class="text-2xl font-cinzel font-bold text-white mb-3">"¿Y si me dejan las cejas negras y cuadradas para siempre?"</h3>
-                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
-                        Toda mujer quiere despertar lista y maquillada, pero el miedo a un resultado artificial la paraliza durante meses.
-                    </p>
-                    <div class="bg-obsidian-950/80 p-4 rounded-2xl border border-gold-500/20 text-gold-300 font-serif italic text-sm">
-                        "No quiero que la gente me diga 'qué bien te tatuaron las cejas'; quiero que me miren y me digan 'qué radiante estás hoy'."
-                    </div>
-                </div>
-
-                <!-- Tension 2 -->
-                <div class="agency-card p-8 rounded-3xl relative overflow-hidden">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Tensión de la Alumna</span>
-                        <i data-lucide="graduation-cap" class="w-5 h-5 text-amber-400"></i>
-                    </div>
-                    <h3 class="text-2xl font-cinzel font-bold text-white mb-3">"Pagué un curso exprés y me da pánico tocar piel real"</h3>
-                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
-                        El 82% de las egresadas de cursos teóricos de 2 días no saben calibrar la profundidad de la aguja y temen causar cicatrices.
-                    </p>
-                    <div class="bg-obsidian-950/80 p-4 rounded-2xl border border-amber-500/20 text-amber-300 font-serif italic text-sm">
-                        "Necesito que una Master de verdad tome mi mano en látex, me corrija la postura y me enseñe a no fallar."
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SLIDE 04: THE BIG IDEA & EL MANIFIESTO -->
-    <!-- ========================================== -->
-    <section id="slide-04" class="slide-card text-center">
-        <img src="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg" alt="Striking Eyes Model" class="slide-bg-img">
-        <div class="slide-overlay"></div>
-
-        <div class="slide-content">
-            <div class="text-gold-400 text-xs uppercase tracking-widest font-mono font-bold mb-3">Acto 03 • The Big Idea</div>
-            
-            <div class="inline-block px-5 py-1 rounded-full border border-gold-400 bg-gold-950/80 text-gold-300 text-xs tracking-widest uppercase font-bold mb-6">
-                Territorio de Marca Oficial
-            </div>
-
-            <h2 class="agency-title text-4xl sm:text-6xl md:text-7xl font-black text-white max-w-5xl mx-auto mb-6 leading-tight">
-                LA ALTA COSTURA <br>
-                <span class="text-gold-gradient">DE LA MIRADA</span>
-            </h2>
-
-            <!-- Manifesto Frame -->
-            <div class="agency-card p-8 md:p-12 rounded-3xl max-w-3xl mx-auto text-center border-gold-500/40 mb-8 shadow-[0_0_60px_rgba(197,160,77,0.2)]">
-                <p class="text-slate-200 font-serif text-base sm:text-xl md:text-2xl italic leading-relaxed mb-6">
-                    "Durante 15 años he observado los rostros humanos. He visto cómo un milímetro de asimetría apaga una mirada, y cómo un trazo certero devuelve años de seguridad y amor propio."
+                <p class="quote-lead text-sm sm:text-base text-slate-300 mb-6">
+                    "Cómo convertir 15 años de maestría en la marca de autor más deseada de Chile."
                 </p>
-                <p class="text-slate-300 font-serif text-sm sm:text-lg italic leading-relaxed mb-6">
-                    "No creo en las plantillas de moda. Creo en la proporción áurea, en la micro-escultura pelo a pelo y en el respeto sagrado por la piel viva."
-                </p>
-                <div class="font-cinzel text-xl sm:text-2xl font-bold text-gold-400">
-                    Jacqueline Barraza • Studio & Master Academy
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 05: NAMING, HOMÓNIMOS & DOMINIO -->
-    <!-- ========================================== -->
-    <section id="slide-05" class="slide-card">
-        <img src="https://images.pexels.com/photos/3997385/pexels-photo-3997385.jpeg" alt="Precision Beauty Specialist" class="slide-bg-img">
-        <div class="slide-overlay"></div>
-
-        <div class="slide-content">
-            <div class="text-center mb-10">
-                <div class="text-gold-400 text-xs uppercase tracking-widest font-mono font-bold mb-3">Acto 04 • Inteligencia de Marca & SEO</div>
-                <h2 class="agency-title text-3xl sm:text-5xl font-black text-white max-w-4xl mx-auto">
-                    ¿CUÁNTAS JACQUELINE BARRAZA HAY? <br>
-                    <span class="text-gold-gradient">Y POR QUÉ COMPRAR jacquelinebarraza.cl HOY</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto items-center">
-                <!-- Investigation Data -->
-                <div class="lg:col-span-7 space-y-4">
-                    <div class="agency-card p-5 rounded-2xl">
-                        <div class="text-xs font-mono text-rose-400 font-bold uppercase mb-1">1. En el Estado de Chile:</div>
-                        <h4 class="text-white font-bold text-sm">Ex-Seremi de Educación de Antofagasta (2016-2017)</h4>
-                        <p class="text-slate-400 text-xs mt-1">Aparece en noticias gubernamentales antiguas. No tiene relación con estética.</p>
+                <div class="frosted-pill text-left space-y-1.5 mb-2">
+                    <div class="flex items-center justify-between text-xs">
+                        <span class="text-yellow-400 font-bold">JACQUELINE BARRAZA</span>
+                        <span class="text-[10px] text-slate-400 font-mono">Top 1% Master</span>
                     </div>
-
-                    <div class="agency-card p-5 rounded-2xl">
-                        <div class="text-xs font-mono text-amber-400 font-bold uppercase mb-1">2. En Literatura / Salud:</div>
-                        <h4 class="text-white font-bold text-sm">Laboratorio Clínico en el Norte & Escritora en Argentina</h4>
-                        <p class="text-slate-400 text-xs mt-1">Homónimos aislados sin presencia en el sector oriente de Santiago.</p>
-                    </div>
-
-                    <div class="agency-card p-5 rounded-2xl border-gold-400/60 bg-gold-950/20">
-                        <div class="text-xs font-mono text-gold-400 font-bold uppercase mb-1">3. En Micropigmentación & Alta Belleza:</div>
-                        <h4 class="text-gold-300 font-bold text-sm">Jacqueline es Única en Chile e Hispanoamérica</h4>
-                        <p class="text-slate-300 text-xs mt-1">Monopolio absoluto de la categoría. Campeona WinArt 2026 y Speaker Henna's Day.</p>
-                    </div>
-                </div>
-
-                <!-- Domain Callout Box -->
-                <div class="lg:col-span-5 agency-card p-8 rounded-3xl text-center border-gold-400 shadow-[0_0_40px_rgba(197,160,77,0.3)]">
-                    <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center">
-                        <i data-lucide="globe" class="w-7 h-7"></i>
-                    </div>
-                    <div class="text-xs font-mono text-slate-400 uppercase tracking-widest mb-1">Decisión de Dominio en NIC Chile</div>
-                    <h3 class="font-cinzel text-2xl font-black text-white mb-2">jacquelinebarraza.cl</h3>
-                    <p class="text-emerald-400 text-xs font-bold mb-4">✓ DISPONIBLE ($10.990 CLP/año)</p>
-                    <p class="text-slate-300 text-xs leading-relaxed mb-6">
-                        Comprarlo hoy asegura su nombre de por vida, consolida su Knowledge Panel en Google y desbanca a cualquier homónimo.
+                    <p class="text-[11px] text-slate-300 leading-snug">
+                        1er Lugar WinArt 2026 • Speaker Henna's Day • Ex-Master PhiAcademy
                     </p>
-                    <span class="inline-block bg-gradient-to-r from-gold-500 to-amber-300 text-obsidian-950 text-xs font-extrabold px-6 py-2.5 rounded-full uppercase tracking-wider">
-                        Compra Inmediata Recomendada
-                    </span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 06: IDEAS CREATIVAS DE GUERRILLA ($0 EN PAUTA) -->
-    <!-- ========================================== -->
-    <section id="slide-06" class="slide-card">
-        <img src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg" alt="Macro Beauty Aesthetics" class="slide-bg-img">
-        <div class="slide-overlay"></div>
+        <!-- ========================================== -->
+        <!-- SLIDE 02: LA HERIDA (EL DATO CRUDO) -->
+        <!-- ========================================== -->
+        <section class="story-slide text-center" id="slide-1">
+            <img src="https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg" alt="Precision Caliper Measurement" class="story-bg">
+            <div class="story-overlay"></div>
 
-        <div class="slide-content">
-            <div class="text-center mb-12">
-                <div class="text-gold-400 text-xs uppercase tracking-widest font-mono font-bold mb-3">Acto 05 • Creatividad de Guerrilla</div>
-                <h2 class="agency-title text-3xl sm:text-5xl font-black text-white max-w-4xl mx-auto">
+            <div class="story-content">
+                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">01 • La Realidad</div>
+
+                <h2 class="hero-headline text-3xl sm:text-4xl font-black text-white mb-3">
+                    1 DE CADA 3 MUJERES <br>
+                    <span class="text-rose-400">TEME QUE LE ARRUINEN LA CARA.</span>
+                </h2>
+
+                <p class="text-xs sm:text-sm text-slate-300 mb-6 leading-relaxed">
+                    El 34% de las clientas que llegan a estudios Master en Santiago buscan <strong>borrar o tapar un desastre</strong> hecho en un salón barato.
+                </p>
+
+                <div class="grid grid-cols-2 gap-3 text-left">
+                    <div class="frosted-pill">
+                        <div class="text-xl font-bold text-yellow-400 font-cinzel">$1.8B USD</div>
+                        <div class="text-[10px] text-slate-400 uppercase">Mercado Global PMU</div>
+                    </div>
+                    <div class="frosted-pill">
+                        <div class="text-xl font-bold text-emerald-400 font-cinzel">$180.000</div>
+                        <div class="text-[10px] text-slate-400 uppercase">Ticket Master Santiago</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SLIDE 03: EL INSIGHT PSICOLÓGICO -->
+        <!-- ========================================== -->
+        <section class="story-slide text-center" id="slide-2">
+            <img src="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg" alt="Intense Eyes Gaze" class="story-bg">
+            <div class="story-overlay"></div>
+
+            <div class="story-content">
+                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">02 • El Insight</div>
+
+                <h2 class="hero-headline text-3xl sm:text-4xl font-black text-white mb-3">
+                    "EL SÍNDROME DE LA <br>
+                    <span class="text-gold-luxury">CEJA DE PLUMÓN"</span>
+                </h2>
+
+                <div class="frosted-pill text-left space-y-3 mb-4">
+                    <div>
+                        <div class="text-[10px] text-yellow-400 uppercase font-mono font-bold">Lo que la clienta calla:</div>
+                        <p class="quote-lead text-xs sm:text-sm text-slate-200 mt-1">
+                            "Quiero despertar maquillada, pero me aterra que sospechen que tengo un tatuaje falso en la cara."
+                        </p>
+                    </div>
+                    <div class="border-t border-white/10 pt-2">
+                        <div class="text-[10px] text-amber-400 uppercase font-mono font-bold">Lo que la alumna teme:</div>
+                        <p class="quote-lead text-xs sm:text-sm text-slate-200 mt-1">
+                            "Hice un curso de 2 días y me da pánico cortar la piel y dejar una cicatriz permanente."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SLIDE 04: THE BIG IDEA (EL CONCEPTO) -->
+        <!-- ========================================== -->
+        <section class="story-slide text-center" id="slide-3">
+            <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg" alt="Flawless Glowing Skin" class="story-bg">
+            <div class="story-overlay"></div>
+
+            <div class="story-content">
+                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">03 • The Big Idea</div>
+
+                <h2 class="hero-headline text-3xl sm:text-5xl font-black text-white mb-3 leading-tight">
+                    LA ALTA COSTURA <br>
+                    <span class="text-gold-luxury">DE LA MIRADA</span>
+                </h2>
+
+                <p class="quote-lead text-xs sm:text-sm text-slate-200 mb-6 italic max-w-sm mx-auto">
+                    "El verdadero lujo no es lo que se nota a diez metros. Es la armonía que nadie puede explicar."
+                </p>
+
+                <div class="frosted-pill text-center">
+                    <p class="text-[11px] text-yellow-300 font-semibold">
+                        Micro-escultura pelo a pelo con proporción áurea. Sin plantillas industriales.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SLIDE 05: NAMING & DOMINIO (LA DECISIÓN) -->
+        <!-- ========================================== -->
+        <section class="story-slide text-center" id="slide-4">
+            <img src="https://images.pexels.com/photos/3997385/pexels-photo-3997385.jpeg" alt="Master Needle Precision" class="story-bg">
+            <div class="story-overlay"></div>
+
+            <div class="story-content">
+                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">04 • Naming & SEO</div>
+
+                <h2 class="hero-headline text-2xl sm:text-4xl font-black text-white mb-3">
+                    COMPRAR <br>
+                    <span class="text-emerald-400 font-mono">jacquelinebarraza.cl</span>
+                </h2>
+
+                <div class="frosted-pill text-left space-y-2.5 mb-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-white">¿Por qué de inmediato?</span>
+                        <span class="text-[10px] text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 px-2 py-0.5 rounded-full font-bold">$10.990 CLP/año</span>
+                    </div>
+                    <ul class="text-[11px] text-slate-300 space-y-1.5">
+                        <li>• <strong>Cero Competencia:</strong> Es la ÚNICA Master con este nombre en Chile.</li>
+                        <li>• <strong>Desbanca Homónimos:</strong> Supera a la ex-Seremi de Educación en Google.</li>
+                        <li>• <strong>Activo Eterno:</strong> Su nombre propio es la marca de mayor valor.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SLIDE 06: CREATIVIDAD DE GUERRILLA ($0 PAUTA) -->
+        <!-- ========================================== -->
+        <section class="story-slide text-center" id="slide-5">
+            <img src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg" alt="Aquarelle Lips and Skin" class="story-bg">
+            <div class="story-overlay"></div>
+
+            <div class="story-content">
+                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">05 • Viralidad Orgánica ($0)</div>
+
+                <h2 class="hero-headline text-2xl sm:text-3xl font-black text-white mb-3">
                     4 FORMATOS VIRALES <br>
-                    <span class="text-gold-gradient">SIN GASTAR $1 EN PUBLICIDAD</span>
+                    <span class="text-gold-luxury">DE ALTO IMPACTO</span>
                 </h2>
-                <p class="text-slate-400 text-sm max-w-2xl mx-auto mt-2">
-                    Contenido estructurado para generar autoridad médica y confianza inmediata en Instagram y TikTok.
-                </p>
-            </div>
 
-            <!-- 4 Guerrilla Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                <div class="agency-card p-6 rounded-3xl">
-                    <div class="text-rose-400 text-xs font-mono font-bold uppercase mb-2">Formato 01 • El Gancho Clínico</div>
-                    <h3 class="text-xl font-cinzel font-bold text-white mb-2">"La Autopsia de la Ceja Mal Hecha"</h3>
-                    <p class="text-slate-300 text-xs leading-relaxed mb-3">
-                        Jacqueline analiza con macro-cámara por qué los pigmentos baratos se ponen azules o grises y cómo corregirlos.
-                    </p>
-                    <div class="bg-obsidian-950 p-3 rounded-xl text-xs text-gold-300 italic border border-white/5">
-                        "Si tus cejas se pusieron grises, no fue culpa de tu piel: fue este error en la aguja..."
+                <div class="grid grid-cols-2 gap-2 text-left text-xs mb-2">
+                    <div class="frosted-pill p-3">
+                        <div class="text-rose-400 font-bold text-[11px]">1. La Autopsia</div>
+                        <p class="text-[10px] text-slate-300 mt-0.5">Por qué los pigmentos baratos se ponen grises.</p>
                     </div>
-                </div>
-
-                <div class="agency-card p-6 rounded-3xl">
-                    <div class="text-amber-400 text-xs font-mono font-bold uppercase mb-2">Formato 02 • Proporción Áurea</div>
-                    <h3 class="text-xl font-cinzel font-bold text-white mb-2">"El Test del Compás de Oro"</h3>
-                    <p class="text-slate-300 text-xs leading-relaxed mb-3">
-                        Demuestra en vivo por qué las plantillas estándar arruinan la armonía facial y cómo se mide cada milímetro real.
-                    </p>
-                    <div class="bg-obsidian-950 p-3 rounded-xl text-xs text-gold-300 italic border border-white/5">
-                        "Tus cejas no son gemelas, son hermanas. Si las fuerzas a ser idénticas, apagas tu mirada."
+                    <div class="frosted-pill p-3">
+                        <div class="text-amber-400 font-bold text-[11px]">2. Compás Áureo</div>
+                        <p class="text-[10px] text-slate-300 mt-0.5">Por qué las plantillas arruinan la mirada.</p>
                     </div>
-                </div>
-
-                <div class="agency-card p-6 rounded-3xl">
-                    <div class="text-emerald-400 text-xs font-mono font-bold uppercase mb-2">Formato 03 • Emoción & Espejo</div>
-                    <h3 class="text-xl font-cinzel font-bold text-white mb-2">"Historias de Rescate Facial"</h3>
-                    <p class="text-slate-300 text-xs leading-relaxed mb-3">
-                        Mini-documentales de 45 segundos capturando el instante en que una clienta con cejas dañadas se mira al espejo tras la corrección.
-                    </p>
-                    <div class="bg-obsidian-950 p-3 rounded-xl text-xs text-gold-300 italic border border-white/5">
-                        Audio ambiental real, la lágrima y el abrazo de agradecimiento.
+                    <div class="frosted-pill p-3">
+                        <div class="text-emerald-400 font-bold text-[11px]">3. Rescate Facial</div>
+                        <p class="text-[10px] text-slate-300 mt-0.5">La emoción de la clienta al verse al espejo.</p>
                     </div>
-                </div>
-
-                <div class="agency-card p-6 rounded-3xl">
-                    <div class="text-purple-400 text-xs font-mono font-bold uppercase mb-2">Formato 04 • Para Alumnas</div>
-                    <h3 class="text-xl font-cinzel font-bold text-white mb-2">"El Reto del Látex en 60 Segundos"</h3>
-                    <p class="text-slate-300 text-xs leading-relaxed mb-3">
-                        Jacqueline traza en látex con cronómetro desafiando la técnica de otras profesionales para invitarlas al evento.
-                    </p>
-                    <div class="bg-obsidian-950 p-3 rounded-xl text-xs text-gold-300 italic border border-white/5">
-                        "Si tu látex se corta o la tinta se expande, no toques piel real. Ven este 13 de Septiembre."
+                    <div class="frosted-pill p-3">
+                        <div class="text-purple-400 font-bold text-[11px]">4. Reto Látex 60s</div>
+                        <p class="text-[10px] text-slate-300 mt-0.5">Trazos milimétricos que atraen alumnas.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 07: SCRIPTS DE COPYWRITING & EMBAJADORAS -->
-    <!-- ========================================== -->
-    <section id="slide-07" class="slide-card">
-        <img src="https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg" alt="Woman Looking in Mirror" class="slide-bg-img">
-        <div class="slide-overlay"></div>
+        <!-- ========================================== -->
+        <!-- SLIDE 07: COPYWRITING & EMBAJADORAS (5%) -->
+        <!-- ========================================== -->
+        <section class="story-slide text-center" id="slide-6">
+            <img src="https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg" alt="Woman Mirror Glow" class="story-bg">
+            <div class="story-overlay"></div>
 
-        <div class="slide-content">
-            <div class="text-center mb-10">
-                <div class="text-gold-400 text-xs uppercase tracking-widest font-mono font-bold mb-3">Acto 06 • Copywriting de Alta Conversión</div>
-                <h2 class="agency-title text-3xl sm:text-5xl font-black text-white max-w-4xl mx-auto">
-                    LOS GUIONES EXACTOS <br>
-                    <span class="text-gold-gradient">QUE CIERRAN CITAS Y MODELOS</span>
+            <div class="story-content">
+                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">06 • Conversión & Modelos</div>
+
+                <h2 class="hero-headline text-2xl sm:text-3xl font-black text-white mb-3">
+                    PROGRAMA <br>
+                    <span class="text-gold-luxury">"ROSTROS DE COLECCIÓN"</span>
                 </h2>
-            </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- WhatsApp Funnel Script -->
-                <div class="agency-card p-7 rounded-3xl">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                        </div>
-                        <h3 class="font-cinzel text-lg font-bold text-white">WhatsApp: Diagnóstico en 3 Pasos</h3>
-                    </div>
-
-                    <div class="space-y-3 text-xs">
-                        <div class="bg-obsidian-950 p-3 rounded-xl border border-white/5">
-                            <strong class="text-gold-400 block mb-1">1. Foto Diagnóstica:</strong>
-                            <p class="text-slate-300 italic">"¡Hola [Nombre]! Para recomendarte la técnica exacta y ver si tu piel es apta, ¿podrías enviarme una foto de tus cejas de cerca con buena luz?"</p>
-                        </div>
-                        <div class="bg-obsidian-950 p-3 rounded-xl border border-white/5">
-                            <strong class="text-gold-400 block mb-1">2. Audio de 30 Segundos:</strong>
-                            <p class="text-slate-300 italic">"(Audio): Hola [Nombre], vi tu foto. En la colita perdimos densidad. Te recomiendo LatinBrows para vellitos al inicio y sombreado suave en el arco."</p>
-                        </div>
-                        <div class="bg-obsidian-950 p-3 rounded-xl border border-white/5">
-                            <strong class="text-gold-400 block mb-1">3. Cierre con Abono ($20k):</strong>
-                            <p class="text-slate-300 italic">"Para reservar tus 2 horas exclusivas con Jacqueline, solicitamos un abono de garantía de $20.000. ¿Te acomoda este Jueves a las 11:00 o Sábado a las 15:00?"</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ambassador Script (5% Discount) -->
-                <div class="agency-card p-7 rounded-3xl">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-8 h-8 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center">
-                            <i data-lucide="sparkles" class="w-4 h-4"></i>
-                        </div>
-                        <h3 class="font-cinzel text-lg font-bold text-white">Programa "Rostros de Colección" (5%)</h3>
-                    </div>
-
-                    <div class="bg-obsidian-950 p-5 rounded-2xl border border-white/5 text-xs text-slate-300 leading-relaxed italic space-y-3">
-                        <p>
-                            "Estimada [Nombre], por la armonía de tus facciones, Jacqueline te ha preseleccionado para el programa exclusivo <strong>'Rostros de Colección 2026'</strong>."
-                        </p>
-                        <p>
-                            "Documentaremos tu procedimiento en fotografía macro de alta definición para nuestro portafolio oficial. A cambio, recibes:"
-                        </p>
-                        <ul class="text-gold-300 space-y-1 not-italic font-semibold pl-2">
-                            <li>✓ 5% de descuento inmediato en tu procedimiento.</li>
-                            <li>✓ Kit Post-Cuidado Dermatológico Premium de regalo.</li>
-                            <li>✓ 1 Sesión de perfilado gratis a los 6 meses.</li>
-                        </ul>
-                        <p class="text-[11px] text-slate-400 not-italic">
-                            Solo abrimos 5 cupos mensuales. ¿Te gustaría activar tu lugar para esta semana?
-                        </p>
+                <div class="frosted-pill text-left space-y-2 mb-3">
+                    <div class="text-xs font-bold text-yellow-400">El Guion de Prestigio (5% Dscto):</div>
+                    <p class="quote-lead text-xs text-slate-200 italic">
+                        "Por la armonía de tus facciones, has sido seleccionada para nuestro portafolio de autor: recibes <strong>5% de beneficio</strong>, <strong>Kit Post-Cuidado</strong> y <strong>Perfilado a los 6 meses</strong>."
+                    </p>
+                    <div class="border-t border-white/10 pt-1 text-[10px] text-slate-400">
+                        No se ruega por fotos: es un privilegio de 5 cupos mensuales.
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 08: EL MOTOR EDUCATIVO: LATEX DAY (13 SEPT) -->
-    <!-- ========================================== -->
-    <section id="slide-08" class="slide-card">
-        <img src="https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg" alt="Latex Training Masterclass" class="slide-bg-img">
-        <div class="slide-overlay"></div>
+        <!-- ========================================== -->
+        <!-- SLIDE 08: EL EVENTO LATEX DAY (13 SEPT) -->
+        <!-- ========================================== -->
+        <section class="story-slide text-center" id="slide-7">
+            <img src="https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg" alt="Latex Practice" class="story-bg">
+            <div class="story-overlay"></div>
 
-        <div class="slide-content">
-            <div class="text-center mb-8">
-                <div class="text-gold-400 text-xs uppercase tracking-widest font-mono font-bold mb-3">Acto 07 • Monetización Educativa</div>
-                <h2 class="agency-title text-3xl sm:text-5xl font-black text-white max-w-4xl mx-auto">
+            <div class="story-content">
+                <div class="inline-block px-3 py-0.5 rounded-full bg-yellow-500 text-black text-[10px] font-extrabold uppercase mb-2">
+                    13 de Septiembre • Providencia
+                </div>
+
+                <h2 class="hero-headline text-2xl sm:text-4xl font-black text-white mb-2">
                     LATEX DAY PRESENCIAL <br>
-                    <span class="text-gold-gradient">13 DE SEPTIEMBRE • PROVIDENCIA</span>
+                    <span class="text-gold-luxury">8H INTENSIVAS • $39.990</span>
                 </h2>
-            </div>
 
-            <!-- Masterclass Box -->
-            <div class="agency-card p-8 md:p-10 rounded-3xl max-w-4xl mx-auto border-gold-400 relative overflow-hidden shadow-[0_0_50px_rgba(197,160,77,0.3)]">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-8">
-                        <div class="inline-block bg-gold-500 text-obsidian-950 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
-                            8 Horas de Entrenamiento Intensivo
-                        </div>
-                        <h3 class="text-2xl font-cinzel font-bold text-white mb-2">Microblading Básico & Avanzado</h3>
-                        <p class="text-slate-300 text-xs md:text-sm leading-relaxed mb-4">
-                            Impartido por <strong>Jacqueline Barraza</strong> (Campeona WinArt 2026) junto a su invitada especial <strong>Frainy Díaz</strong> (Efecto Polvo). A pasos del Metro Pedro de Valdivia. Incluye kit de práctica completo y coffee break.
-                        </p>
-                        <div class="p-3 bg-obsidian-950 rounded-xl border border-gold-500/30 text-xs text-gold-300 font-medium">
-                            💰 <strong>El Argumento de Payback 3x:</strong> "Con una sola clienta que atiendas cobrando $120.000, recuperas 3 veces el valor de este taller."
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-4 text-center bg-obsidian-950/90 p-6 rounded-2xl border border-white/10">
-                        <div class="text-xs text-slate-400 uppercase font-mono mb-1">Preventa Exclusiva</div>
-                        <div class="text-4xl font-cinzel font-black text-gold-400 mb-1">$39.990 <span class="text-xs text-slate-400 font-sans">CLP</span></div>
-                        <p class="text-[10px] text-emerald-400 font-semibold mb-4">Cupos Estrictamente Limitados</p>
-                        <a href="https://wa.me/56900000000?text=Hola%20Jacqueline,%20quiero%20reservar%20mi%20cupo%20para%20el%20Latex%20Day" target="_blank" class="block w-full py-2.5 rounded-xl bg-gradient-to-r from-gold-500 to-amber-300 text-obsidian-950 font-bold text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(197,160,77,0.4)]">
-                            Reservar Cupo
-                        </a>
+                <div class="frosted-pill text-left space-y-2 mb-3">
+                    <p class="text-xs text-slate-200">
+                        Junto a <strong>Frainy Díaz</strong> (Efecto Polvo). Metro Pedro de Valdivia. Incluye kit y coffee break.
+                    </p>
+                    <div class="p-2 bg-black/60 rounded-lg border border-yellow-500/40 text-[11px] text-yellow-300 font-bold">
+                        💰 Payback 3x: "Con una sola clienta que cobres $120.000 recuperas 3 veces el taller."
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SLIDE 09: PAID MEDIA & ESCALA -->
+        <!-- ========================================== -->
+        <section class="story-slide text-center" id="slide-8">
+            <img src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg" alt="Scale Beauty Market" class="story-bg">
+            <div class="story-overlay"></div>
+
+            <div class="story-content">
+                <div class="text-yellow-400 text-[10px] uppercase font-mono tracking-widest font-bold mb-2">08 • Escala Pagada (Fase 2)</div>
+
+                <h2 class="hero-headline text-2xl sm:text-3xl font-black text-white mb-3">
+                    META ADS <br>
+                    <span class="text-gold-luxury">HIPERLOCAL PROVIDENCIA</span>
+                </h2>
+
+                <div class="frosted-pill text-left text-xs space-y-2 mb-3">
+                    <p class="text-slate-300">
+                        <strong>Target:</strong> Mujeres 26-55 años en Providencia, Las Condes y Vitacura (radio 5 km).
+                    </p>
+                    <p class="text-slate-300">
+                        <strong>Creativo:</strong> Video macro del trazo en piel + Hook: "¿Miedo al microblading artificial?".
+                    </p>
+                    <div class="text-[10px] text-emerald-400 font-mono">
+                        Lead Magnet: "Diagnóstico Facial Gratuito por Foto en WhatsApp"
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SLIDE 10: EL CIERRE (LLAMADO A LA ACCIÓN) -->
+        <!-- ========================================== -->
+        <section class="story-slide text-center" id="slide-9">
+            <img src="https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg" alt="Confident Master Portrait" class="story-bg">
+            <div class="story-overlay"></div>
+
+            <div class="story-content">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full border-2 border-yellow-400 flex items-center justify-center text-yellow-400 font-cinzel font-black text-lg bg-black/70 shadow-[0_0_20px_rgba(212,175,55,0.5)]">
+                    JB
+                </div>
+
+                <h2 class="hero-headline text-2xl sm:text-4xl font-black text-white mb-3">
+                    LA MAESTRÍA YA EXISTE. <br>
+                    <span class="text-gold-luxury">AHORA CONQUISTAMOS CHILE.</span>
+                </h2>
+
+                <div class="space-y-2.5 max-w-xs mx-auto mb-4">
+                    <a href="FLUJO_DE_INFORMACION_Y_PENSAMIENTO.md" target="_blank" class="block w-full py-3 rounded-xl bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-300 text-black font-extrabold text-xs uppercase tracking-wider shadow-[0_0_25px_rgba(212,175,55,0.4)]">
+                        Ver Bitácora de Pensamiento (.md)
+                    </a>
+                    <a href="https://github.com/kulhunter/JacquelineBarraza" target="_blank" class="block w-full py-2.5 rounded-xl border border-yellow-500/40 text-yellow-300 bg-black/60 font-semibold text-xs uppercase tracking-wider">
+                        Repositorio GitHub Oficial
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BOTTOM FLOATING NAVIGATION BAR -->
+    <nav class="bottom-nav-bar">
+        <button id="prevBtn" class="flex items-center space-x-1 text-xs text-slate-400 hover:text-white px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
+            <i data-lucide="chevron-up" class="w-4 h-4"></i>
+            <span>Ant</span>
+        </button>
+
+        <div class="text-[11px] font-mono text-yellow-400 font-bold" id="slideIndicator">
+            01 / 10
         </div>
-    </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 09: ESCALABILIDAD & PLANNING -->
-    <!-- ========================================== -->
-    <section id="slide-09" class="slide-card text-center">
-        <img src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg" alt="Future Scaling" class="slide-bg-img">
-        <div class="slide-overlay"></div>
+        <button id="nextBtn" class="flex items-center space-x-1 text-xs text-black font-bold px-4 py-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-amber-300 shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+            <span>Sig</span>
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+        </button>
+    </nav>
 
-        <div class="slide-content">
-            <div class="text-gold-400 text-xs uppercase tracking-widest font-mono font-bold mb-3">Acto 08 • Hoja de Ruta & Cierre</div>
-            
-            <h2 class="agency-title text-4xl sm:text-6xl font-black text-white max-w-4xl mx-auto mb-6">
-                LA MAESTRÍA YA EXISTE. <br>
-                <span class="text-gold-gradient">AHORA CONSTRUIMOS EL LIDERAZGO.</span>
-            </h2>
-
-            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                Todo el plan está trazado: desde la compra del dominio <code>jacquelinebarraza.cl</code> hasta los guiones orgánicos y el evento del 13 de Septiembre.
-            </p>
-
-            <!-- 4 Week Timeline Box -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-left mb-10">
-                <div class="agency-card p-4 rounded-2xl">
-                    <div class="text-gold-400 text-[10px] font-mono font-bold">SEMANA 1</div>
-                    <div class="text-white font-bold text-xs mt-1">Dominio & Setup</div>
-                    <div class="text-[11px] text-slate-400">jacquelinebarraza.cl + WhatsApp</div>
-                </div>
-                <div class="agency-card p-4 rounded-2xl">
-                    <div class="text-gold-400 text-[10px] font-mono font-bold">SEMANA 2</div>
-                    <div class="text-white font-bold text-xs mt-1">Lanzamiento Latex</div>
-                    <div class="text-[11px] text-slate-400">Video Reto + Preventa $39.990</div>
-                </div>
-                <div class="agency-card p-4 rounded-2xl">
-                    <div class="text-gold-400 text-[10px] font-mono font-bold">SEMANA 3</div>
-                    <div class="text-white font-bold text-xs mt-1">Cierre de Cupos</div>
-                    <div class="text-[11px] text-slate-400">Escasez + Embajadoras 5%</div>
-                </div>
-                <div class="agency-card p-4 rounded-2xl border-gold-400 bg-gold-950/30">
-                    <div class="text-gold-300 text-[10px] font-mono font-bold">13 SEPTIEMBRE</div>
-                    <div class="text-gold-200 font-bold text-xs mt-1">Evento Presencial</div>
-                    <div class="text-[11px] text-slate-300">8 Horas Providencia</div>
-                </div>
-            </div>
-
-            <!-- Final CTAs -->
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="FLUJO_DE_INFORMACION_Y_PENSAMIENTO.md" target="_blank" class="px-8 py-3 rounded-full bg-gradient-to-r from-gold-500 to-amber-300 text-obsidian-950 font-bold text-xs uppercase tracking-wider shadow-[0_0_25px_rgba(197,160,77,0.5)] hover:scale-105 transition-all">
-                    Ver Registro de Pensamiento Completo (.md)
-                </a>
-                <a href="https://github.com/kulhunter/JacquelineBarraza" target="_blank" class="px-6 py-3 rounded-full border border-gold-400/40 text-gold-300 hover:bg-gold-500/10 font-semibold text-xs uppercase tracking-wider transition-all">
-                    Repositorio Oficial en GitHub
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-8 px-6 bg-obsidian-950 border-t border-gold-500/20 text-center text-xs text-slate-400">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center space-x-2">
-                <span class="font-cinzel font-bold text-gold-400">JACQUELINE BARRAZA</span>
-                <span>• Studio & Master Academy</span>
-            </div>
-            <div>
-                Estrategia y Creatividad de Nivel Global • 2026
-            </div>
-            <div>
-                <a href="https://www.instagram.com/jacqueline.browsmaster/" target="_blank" class="text-gold-400 hover:underline">@jacqueline.browsmaster</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Initialize Lucide Icons -->
+    <!-- JS ENGINE -->
     <script>
         lucide.createIcons();
 
-        // Keyboard Navigation (Arrow Right / Left)
-        document.addEventListener('keydown', function(e) {
-            const slides = ['slide-01', 'slide-02', 'slide-03', 'slide-04', 'slide-05', 'slide-06', 'slide-07', 'slide-08', 'slide-09'];
-            let current = 0;
-            const scrollPos = window.scrollY + 200;
-            
-            slides.forEach((id, index) => {
-                const el = document.getElementById(id);
-                if (el && el.offsetTop <= scrollPos) {
-                    current = index;
+        const container = document.getElementById('deckContainer');
+        const segments = document.querySelectorAll('.progress-segment');
+        const indicator = document.getElementById('slideIndicator');
+        const totalSlides = 10;
+
+        function updateSlideState() {
+            const scrollPos = container.scrollTop;
+            const height = window.innerHeight;
+            const currentIndex = Math.round(scrollPos / height);
+
+            segments.forEach((seg, i) => {
+                if (i <= currentIndex) {
+                    seg.classList.add('active');
+                } else {
+                    seg.classList.remove('active');
                 }
             });
 
-            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-                if (current < slides.length - 1) {
-                    document.getElementById(slides[current + 1]).scrollIntoView({ behavior: 'smooth' });
-                }
+            const currentNumber = String(Math.min(currentIndex + 1, totalSlides)).padStart(2, '0');
+            indicator.textContent = `${currentNumber} / 10`;
+        }
+
+        container.addEventListener('scroll', updateSlideState);
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            const height = window.innerHeight;
+            container.scrollBy({ top: height, behavior: 'smooth' });
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            const height = window.innerHeight;
+            container.scrollBy({ top: -height, behavior: 'smooth' });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const height = window.innerHeight;
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+                container.scrollBy({ top: height, behavior: 'smooth' });
             } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                if (current > 0) {
-                    document.getElementById(slides[current - 1]).scrollIntoView({ behavior: 'smooth' });
-                }
+                container.scrollBy({ top: -height, behavior: 'smooth' });
             }
         });
     </script>
