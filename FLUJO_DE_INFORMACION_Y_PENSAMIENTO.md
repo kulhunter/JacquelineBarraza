@@ -1,162 +1,143 @@
-# FLUJO DE INFORMACIÓN Y PENSAMIENTO ESTRATÉGICO
-## Documento Maestro de Registro Intelectual, Deducción y Planificación Estratégica
+# FLUJO DE INFORMACIÓN Y PENSAMIENTO ESTRATÉGICO (MASTER LOG)
+## Registro Intelectual, Deducción de Mercado, Copywriting, Planning y Creatividad de Guerrilla
 **Cliente:** Jacqueline Barraza | Master & Artista Internacional de Micropigmentación  
-**Nivel de Consultoría:** Strategic Brand & Growth Blueprint (Estilo McCann / VML / Wunderman Thompson)  
+**Nivel de Consultoría:** Strategic Brand & Growth Architecture (McCann / VML / Wunderman Thompson Standard)  
 **Fecha:** Agosto - Septiembre 2026  
 **Repositorio Oficial:** `https://github.com/kulhunter/JacquelineBarraza`
 
 ---
 
-## 1. REGISTRO DE HIPÓTESIS Y ENFOQUE DE CONSULTORÍA
+## 1. INVESTIGACIÓN DE HOMÓNIMOS, AMBIGÜEDAD Y DESAMBIGUACIÓN DE MARCA
 
-### 1.1. Contexto Inicial y Diagnóstico del Perfil
-*   **Sujeto:** Jacqueline Barraza, especialista en micropigmentación con 15 años de sólida base en la industria de la belleza (como estilista y manicurista de alto nivel) y 6 años dedicados exclusivamente a perfeccionar el arte del microblading y la micropigmentación avanzada.
-*   **Hitos de Autoridad Técnica & Reconocimientos:**
-    *   Ex Master de **PhiAcademy en Chile** (máximo estándar técnico y disciplinario europeo en las prestigiosas técnicas de *PhiBrows* y *LatinBrows*).
-    *   Consolidada tras un año de exitosa trayectoria como **Artista y Master Independiente**, elevando el estándar de la micropigmentación en el país.
-    *   **Primer Lugar en la competencia WinArt 2026** en la categoría *Microblading Modelo*.
-    *   Destacada participación como **Speaker Non Stop en Henna's Day Chile 2026**, compartiendo su visión basada en la precisión, la naturalidad y la maestría artesanal.
-*   **Servicios Actuales:**
-    *   *Cejas:* Microblading, Hairstrokes, Latinbrows, Efecto Polvo.
-    *   *Rostro:* Eyeliner - Intralash, Aquarelle Lips, Full Lips, Pecas.
-    *   *Corporal / Paramédico:* Areolas (reconstrucción oncoplástica y estética), Camuflaje Cicatrices, Camuflaje Estrías.
-    *   *Adicionales / Correctivos:* Remoción Pigmento, Cover Up, Hialurlips, Revive Brows.
-    *   *Básicos de Alta Recurrencia:* Lifting Pestañas, Laminado Cejas, Perfilado de Cejas, Decoloración y Tinte de Cejas.
-*   **Hito Próximo de Monetización Educativa:**
-    *   **"Latex Day Presencial" de Microblading Básico y Avanzado:** Impartido junto a su invitada especial Frainy Díaz (técnica Efecto Polvo).
-    *   *Fecha:* 13 de Septiembre de 2026.
-    *   *Ubicación:* Providencia, Santiago (a pasos del Metro Pedro de Valdivia).
-    *   *Formato:* 8 horas de entrenamiento intensivo, material de práctica completo incluido, coffee break, trabajo de trazos, simetría y estructura en látex de alto rendimiento.
-    *   *Precio Preventa:* $39.990 CLP (cupos limitados).
+### 1.1. ¿Cuántas "Jacqueline Barraza" existen en Chile y el Mundo? (Hallazgos Reales)
+Tras un barrido exhaustivo en bases de datos de prensa, registros públicos chilenos, entidades comerciales y redes sociales, se detectaron los siguientes homónimos activos:
 
-### 1.2. El Problema Central (Tensión de Negocio)
-*   Jacqueline posee un talento técnico de **Top 1% en Chile e Hispanoamérica**, avalado por trofeos de campeonato, certificaciones europeas y respeto unánime del gremio.
-*   Sin embargo, su huella digital y estructura comercial presentan las limitaciones clásicas del profesional independiente:
-    1.  *Dependencia excesiva de Instagram:* Toda la adquisición recae en publicaciones esporádicas y mensajes directos manuales.
-    2.  *Desconocimiento del marketing tradicional:* No domina el lenguaje técnico publicitario, lo que genera fricción al momento de delegar o estructurar campañas.
-    3.  *Invisibilidad en Google (SEO):* Cuando una potencial clienta de alto poder adquisitivo busca en Google "microblading providencia" o "mejor master microblading santiago", Jacqueline no aparece en los primeros resultados.
-    4.  *Falta de un sistema dual de monetización:* No están separados formalmente el negocio B2C (atención a clientas finales de alto ticket) del negocio B2B (capacitación a nuevas micropigmentadoras).
-*   **Solución Estratégica:** Transformarla de una "prestadora de servicios de estética que publica en Instagram" a una **Institución de Autoridad & Alta Costura de la Mirada**, activando dos motores de ingresos independientes:
-    1.  *Motor B2C (Clientas Finales - Alto Ticket):* Procedimientos premium basados en hipernaturalidad, paramédica y corrección.
-    2.  *Motor B2B / Educación (Alumnas - Escala y Recurrencia):* Formaciones en látex, masterclasses presenciales y programas de mentoría profesional.
+1.  **Ámbito Político / Gubernamental (Chile):**
+    *   **Jacqueline Barraza (o Jaqueline Barraza):** Ex Secretaria Regional Ministerial (SEREMI) de Educación de la Región de Antofagasta (2016–2017). Cuenta con decenas de registros indexados en *La Tercera*, Ministerio del Trabajo, Ministerio de Medio Ambiente y Ley del Lobby.
+    *   *Impacto SEO:* Ocupa noticias históricas institucionales si solo se busca el nombre plano.
+2.  **Ámbito Clínico / Salud (Chile):**
+    *   **"Jacqueline Barraza Oliveros Laboratorio Clínico E.I.R.L.":** Empresa de análisis clínicos registrada en Antofagasta.
+3.  **Ámbito Literario (Chile / Argentina):**
+    *   **Jacqueline Barraza:** Escritora chilena nacida en La Serena radicada en San Juan, Argentina, autora de libros sobre violencia de género y trata (*"No es el amor... el que mata"*).
+4.  **Ámbito Micropigmentación & Estética:**
+    *   **NO EXISTE OTRA JACQUELINE BARRAZA EN CHILE NI EN LATINOAMÉRICA EN EL RUBRO DE MICROPIGMENTACIÓN.**
+    *   Ella es la única profesional en su categoría con este nombre, validada además en las competencias **WinArt 2026** (1er Lugar Microblading Modelo), **Henna's Day Chile 2026** (Speaker Non Stop) y **Wulop Chile 2026**.
+
+### 1.2. Decisión Estratégica: ¿Compramos el dominio `jacquelinebarraza.cl`?
+*   **Dictamen de Agencia: SÍ, CATEGÓRICAMENTE SÍ.**
+*   **Costo:** ~$10.990 CLP al año en NIC Chile.
+*   **Justificación Técnica & Comercial:**
+    1.  *Propiedad de Marca Defensiva:* Evita que un tercero o competidor registre su nombre propio.
+    2.  *Construcción de Autoridad Personal:* Los títulos de "Master", "Speaker" y "Campeona" deben anclarse a su nombre personal, no a una marca genérica que muera si cambia de local.
+    3.  *Desambiguación Total en Google:* Al crear el sitio oficial en `jacquelinebarraza.cl` con marcado de datos `Schema.org` (tipo `Person` + `BeautySalon` + `EducationalOrganization`), Google desplaza a la ex-Seremi y a los registros antiguos, posicionando a Jacqueline en la primera posición con su Knowledge Panel.
+    4.  *Redirecciones Estratégicas Sugeridas:* Comprar también `jbmaster.cl` o `jacquelinebrows.cl` si están libres para redirigir directamente al sitio principal.
 
 ---
 
-## 2. INVESTIGACIÓN Y RECOLECCIÓN DE DATOS DE MERCADO
+## 2. EL RELATO DE MARCA (BRAND NARRATIVE & MANIFIESTO)
 
-### 2.1. Métricas Globales del Mercado de Micropigmentación (PMU) 2025–2026
-*   **Tamaño del Mercado Global:** El mercado de micropigmentación y maquillaje permanente superó los **$1.800 millones de USD en 2025** y proyecta alcanzar más de **$3.500 millones de USD para 2033** con un CAGR compuesto de **8.2%** (*Fuentes: DataIntelo Research, Intent Market Research, Straits Research*).
-*   **Segmento Dominante:** Las aplicaciones en cejas representan el **58.4% del volumen global**, impulsadas por la tendencia post-pandemia del "Clean Look" y la búsqueda de optimización de tiempo (ahorro de 15-20 minutos diarios en maquillaje matutino).
-*   **Microblading & Agujas de Precisión:** El mercado específico de instrumental y agujas de microblading alcanzó **$312.4M USD en 2025** (crecimiento a $618.7M en 2034, CAGR 7.9%).
+### 2.1. El Eje Conceptual: "La Ciencia de lo Imperceptible"
+*   **El Gran Problema de la Categoría:** La micropigmentación en Chile está contaminada por el miedo al "tatuaje tosco": cejas que parecen dibujadas con plumón negro, labios con rebordes oscuros de los años 90 y tonos que con el tiempo viran a azul o naranja.
+*   **La Tesis de Jacqueline:**
+    > *"El verdadero lujo en la belleza no es lo que se nota a diez metros de distancia; es la armonía que nadie puede explicar. Mi trabajo no busca que te digan 'qué bien te tatuaron las cejas', sino que te miren y te digan 'qué radiante está tu rostro hoy'."*
 
-### 2.2. Mercado Chileno y Dinámica en Santiago (Providencia, Las Condes, Vitacura)
-*   **Rango de Precios en Santiago:**
-    *   *Gama Baja / Informal:* $40.000 – $70.000 CLP (alto riesgo de viraje de color a azul/rojo, trazos gruesos, insumos no certificados).
-    *   *Gama Media / Salones de Cadena:* $99.900 – $150.000 CLP.
-    *   *Gama Alta / Artistas Master Certificados:* $190.000 – $280.000 CLP (con retoque incluido o por separado).
-*   **Tasa de Corrección / Arrepentimiento:** El **34% de las clientas que llegan a estudios de alta gama en Santiago** buscan arreglar o remover un procedimiento mal ejecutado en otros lugares. Esto convierte a los servicios correctivos (*Remoción con ácido/láser, Cover Up, Revive Brows*) en el mayor caballo de Troya de alta confianza.
-
----
-
-## 3. CONSUMER INSIGHTS Y ARQUITECTURA PSICOLÓGICA
-
-### 3.1. Insight #1: "El Síndrome de la Ceja de Plumón" (Miedo a lo Irreversible)
-*   **Tensión Cultural:** La mujer chilena desea cejas pobladas y definidas, pero le aterra salir del estudio con "cejas de Sharpie", oscuras, cuadradas o artificiales que no combinen con su rostro o que con los años se tornen verdes o violetas.
-*   **Verbatim Oculto de la Clienta:** *"No quiero que la gente me diga 'qué bien te quedó el microblading', quiero que me digan 'qué linda estás hoy, ¿te hiciste algo?'"*.
-*   **Respuesta de Marca de Jacqueline:** **"La Ciencia de lo Imperceptible"**. Cada trazo simula la dirección milimétrica natural del vello con proporciones áureas personalizadas.
-
-### 3.2. Insight #2: "La Soledad de la Alumna de Estética"
-*   **Tensión en Educación:** El 80% de los cursos de microblading en el mercado chileno venden "certificados rápidos" de 2 días donde la alumna sale con miedo a tocar una persona real, con dudas sobre profundidad de piel y sin soporte posterior.
-*   **Verbatim Oculto de la Alumna:** *"Tengo miedo de cortar de más la piel de mi primera clienta y dejarle una cicatriz permanente"*.
-*   **Respuesta de Formación de Jacqueline:** **"Pedagogía de Maestría en Látex y Piel Viva"**. Rigor de 8 horas en látex de alto rendimiento, corrección de postura ergonómica, presión y ángulo a nivel milimétrico.
+### 2.2. El Manifiesto de Jacqueline Barraza (Para Web y Video de Marca)
+> *"Durante 15 años he observado los rostros humanos. He visto cómo un milímetro de asimetría apaga una mirada, y cómo un trazo certero devuelve años de seguridad y amor propio.*
+>
+> *No creo en las plantillas de moda ni en las modas pasajeras. Creo en la proporción áurea, en la micro-escultura pelo a pelo y en el respeto sagrado por la piel viva.*
+>
+> *Soy Jacqueline Barraza. Y esto no es solo micropigmentación: es la Alta Costura de tu mirada."*
 
 ---
 
-## 4. ANÁLISIS DE BENCHMARKS (LOCALES, INTERNACIONALES Y CROSS-INDUSTRY)
+## 3. IDEAS CREATIVAS DE GUERRILLA (SIN GRANDES PRESUPUESTOS DE PUBLICIDAD)
 
-### 4.1. Benchmarks Locales (Santiago)
-1.  **Estudios en Providencia / Tobalaba:** Se enfocan en volumen rápido, promociones con cupones, estética genérica. Falta de autoridad técnica individual.
-2.  **Clínicas en Vitacura / Lo Barnechea:** Apuntan a lujo pero suelen ser impersonales (atienden técnicos rotativos, no la Master directamente).
-*   *Ventaja Diferencial de Jacqueline:* **Atención directa de una Campeona y Master (WinArt 2026)** con 15 años de experiencia acumulada.
+A diferencia de las agencias tradicionales que solo piden millones en anuncios de pago, diseñamos **6 mecánicas creativas de costo cero / mínimo** basadas en psicología de viralidad y retención orgánica:
 
-### 4.2. Benchmarks Internacionales
-1.  **PhiAcademy (Europa / Austria - Branko Babić):** El estándar de oro en disciplina, compás de oro, pigmentos estables sin metales pesados. Jacqueline tiene ese ADN en sus venas técnicas.
-2.  **Sviatoslav Otchenash (AcademyS / Europa del Este):** Maestría en sombreados ultra-suaves (*Magic Shading*), estética minimalista en blanco y negro, iluminación clínica de estudio fotográfico.
-3.  **Mara Colors / Microblading LA:** Máxima viralidad en Reels/TikTok a través de videos macro 4K del corte de la aguja con audio ASMR del corte en piel/látex.
+### 💡 Mecánica 1: "La Autopsia de la Ceja Mal Hecha" (Serie en Reels / TikTok)
+*   **Concepto:** Jacqueline analiza en video (con lupa dermatológica o macro-cámara) por qué ciertas cejas viran a azul o por qué se borran a las 3 semanas.
+*   **Hook:** *"Si te hicieron microblading y tus cejas se pusieron grises, no fue culpa de tu piel: fue este error en la profundidad de la aguja."*
+*   **Efecto Psicológico:** Jacqueline no vende nada; educa como una cirujana. La clienta asustada siente alivio instantáneo y solo confía en ella para arreglárselo.
 
-### 4.3. Modelos Cross-Industry a Replicar
-*   **Haute Couture (Hermès / Chanel):** El concepto de "Artesanía a Medida". Nunca se aplica una plantilla genérica; cada ceja es una pieza única de anatomía facial.
-*   **Apple Genius Bar:** Diagnóstico previo estructurado con tablet digital donde se proyecta la simetría antes de hacer una sola incisión.
-*   **Tech Bootcamps (Y Combinator / Ironhack):** El modelo del "Latex Day": 100% práctico, hands-on, resolución de errores en tiempo real y retorno de inversión claro para la alumna.
+### 💡 Mecánica 2: "El Test del Compás Áureo en la Calle / Clientes"
+*   **Concepto:** Jacqueline muestra en videos cortos cómo mide con el compás de oro las facciones de personas reales, demostrando por qué una ceja nunca debe ser idéntica a la otra (porque ningún rostro es perfectamente simétrico).
+*   **Hook:** *"Tus cejas no son gemelas, son hermanas. Deja de forzar una plantilla que arruina tu expresión natural."*
 
----
+### 💡 Mecánica 3: "Historias de Rescate: De la Angustia al Espejo"
+*   **Concepto:** Mini-documentales de 45 segundos de clientas que llegaron llorando por un procedimiento mal hecho en otro salón y el momento exacto en que ven el resultado de la corrección de Jacqueline.
+*   **Audio Clave:** Audio ambiente real, sin música exagerada, mostrando la lágrima y el abrazo de agradecimiento.
 
-## 5. ESTRATEGIA DE POSICIONAMIENTO Y BRANDING
-
-### 5.1. Territorio de Marca: "La Alta Costura de la Mirada"
-*   **Tagline Principal:** *Precisión Quirúrgica. Alma Artesanal.*
-*   **Propuesta Única de Valor (UVP):** Micropigmentación hiperrealista y reconstructiva diseñada con rigor de Master Internacional, devolviendo armonía y confianza sin artificios.
-
-### 5.2. Sistema de Naming y Marca
-*   **Marca Corporativa / Academia:** **JACQUELINE BARRAZA | Studio & Master Academy**
-*   **Monograma / Diminutivo de Lujo:** **JB** (Emblema de oro satinado entrelazado con líneas finas que evocan micro-trazos de compás).
-*   **Líneas de Negocio Claras:**
-    *   `JB Signature`: Procedimientos faciales y corporales de autor.
-    *   `JB Academy`: Formaciones profesionales, Latex Days y mentorías.
-    *   `JB Medical Care`: Reconstrucción de areolas y camuflaje cicatrizal postquirúrgico.
-
-### 5.3. Auditoría y Resolución de Conflictos SEO
-*   **Problema Detectado:**
-    *   El término "Jacqueline Barraza" compite en Google con personas homónimas en redes sociales y notas genéricas sin contexto local.
-    *   El usuario de Instagram `@jacqueline.browsmaster` limita la marca a "brows" cuando ella hace labios, ojos, areolas y estética avanzada.
-*   **Estrategia de Solución SEO:**
-    1.  Estructurar el Schema Markup (JSON-LD) de Google para la entidad `BeautySalon` / `EducationalOrganization` con geolocalización en Providencia, Santiago.
-    2.  Indexar páginas pilares temáticas:
-        *   `jacquelinebarraza.cl/microblading-santiago-providencia`
-        *   `jacquelinebarraza.cl/curso-microblading-santiago`
-        *   `jacquelinebarraza.cl/micropigmentacion-labios-aquarelle`
-        *   `jacquelinebarraza.cl/camuflaje-cicatrices-areolas-chile`
-    3.  Optimización de Google Business Profile (ex Google Maps) con el título estratégico: **Jacqueline Barraza | Master Microblading & Academia Santiago**.
+### 💡 Mecánica 4: "El Reto del Látex de 60 Segundos" (Para Alumnas)
+*   **Concepto:** Jacqueline graba un plano cerrado de sus manos trazando en látex con un cronómetro y retando a otras micropigmentadoras: *"Si tus trazos en látex sangran tinta o se cruzan en la espina 3, no estás lista para piel viva. Ven a corregirlo el 13 de Septiembre en Providencia."*
 
 ---
 
-## 6. SISTEMA DE CAPTACIÓN COMERCIAL: CLIENTAS Y MODELOS
+## 4. SCRIPTS DE COPYWRITING PALABRA POR PALABRA
 
-### 6.1. Funnel B2C: De Desconocida a Clienta VIP
-1.  **Atracción (Meta Ads Local Geocercado 5km Providencia + Las Condes/Vitacura/Ñuñoa):**
-    *   *Creativo 1 (Video Macro ASMR):* Trazo hiperrealista en primer plano con audio nítido. Hook: "¿Tienes miedo de que el microblading se vea artificial? Mira esto a 10x de zoom."
-    *   *Creativo 2 (Autoridad):* Jacqueline en Henna's Day y con su trofeo WinArt 2026. Hook: "La diferencia entre un tatuaje facial y una obra de arte es la mano de una Master."
-2.  **Lead Magnet de Confianza:** "Simulador / Diagnóstico Facial Digital Gratuito por WhatsApp" (Envía tu foto sin maquillaje con buena luz y Jacqueline te indica qué técnica exacta es ideal para tu tipo de piel).
-3.  **Conversión en WhatsApp Business:** Guion consultivo de 3 pasos (Escucha activa -> Explicación médica/estética -> Agendamiento con abono de garantía).
+### 4.1. Guion de WhatsApp: Protocolo de Diagnóstico Consultivo en 3 Pasos
+*(Diseñado para que Jacqueline o su asistente conviertan consultas frías en citas pagadas sin sonar invasivas)*
 
-### 6.2. Estrategia "Rostros de Colección / Embajadoras" (5% Beneficio Exclusivo)
-*   **Mecánica de Elegibilidad:** No se ofrece como un "descuento por favor", sino como un **programa selectivo de embajadoras** ("Colección Rostros Reales JB 2026").
-*   **Condiciones Claras:**
-    1.  Firma de consentimiento de cesión de derechos de imagen para fines educativos y portafolio 4K.
-    2.  Grabación del proceso (antes, diseño áureo, procedimiento y resultado final recién hecho).
-    3.  Envío de foto de control a los 30 días post-cicatrización.
-*   **Incentivo:** 5% de descuento directo en el procedimiento + Kit post-cuidado dermatológico premium de regalo + 1 sesión de perfilado de cejas de mantenimiento gratis a los 6 meses.
+*   **Paso 1 (Recepción & Validación Emocional):**
+    > *"¡Hola [Nombre]! Qué gusto saludarte. Soy Jacqueline / parte del equipo de Jacqueline Barraza Master Studio. Qué alegría que quieras cuidar tu mirada con nosotras.*
+    > *Para recomendarte la técnica exacta (Microblading pelo a pelo, LatinBrows o Efecto Polvo) y ver si tu piel es apta, ¿podrías enviarme una foto de tus cejas de cerca, con buena luz y sin maquillaje? Cuéntame también si tienes algún procedimiento anterior."*
 
----
+*   **Paso 2 (Diagnóstico Personalizado - Audio de 30 segundos):**
+    > *(Audio): "Hola [Nombre], estuve analizando tu foto. Tienes una estructura ósea hermosa, pero veo que en la colita de la ceja perdimos densidad de vellos. En tu caso particular, un microblading tradicional quedaría muy plano; te recomiendo una técnica mixta (LatinBrows) para darte vellitos naturales al inicio y un sombreado suave que defina el arco. ¿Buscas un resultado súper sutil para el día a día o algo más marcado?"*
 
-## 7. SISTEMA DE CAPTACIÓN EDUCATIVA: ALUMNAS Y LATEX DAY
-
-### 7.1. Campaña de Conversión para "Latex Day Presencial" (13 de Septiembre - Providencia)
-*   **Propuesta:** 8 horas intensivas, Metro Pedro de Valdivia, incluye kit de práctica completo, coffee break y co-teaching con Frainy Díaz (Efecto Polvo). Preventa: $39.990 CLP.
-*   **Tesis de Venta Irresistible (Payback Inmediato):**
-    *   *"Con una sola clienta que atiendas cobrando $120.000 CLP, recuperas 3 veces la inversión total de este taller en un solo día de trabajo."*
-*   **Embudos de Tráfico para el Evento:**
-    1.  *Instagram Stories & Reels Orgánico:* Demostración de errores comunes al trazar en látex (profundidad incorrecta, apertura de espinas, vibración de mano) y cómo corregirlo en 3 minutos.
-    2.  *Comunidades de Belleza en Facebook y Grupos de WhatsApp:* Publicación de valor técnico invitando al evento de Providencia.
-    3.  *Cupos Limitados:* Contador de escasez real (máximo 12 a 15 cupos por sala para garantizar corrección personalizada mano a mano).
+*   **Paso 3 (Cierre de Reserva con Abono):**
+    > *"Perfecto [Nombre]. Para garantizar que Jacqueline te atienda personalmente y dedique las 2 horas completas a tu diseño facial, reservamos con un abono de garantía de $20.000 (que se descuenta de tu valor final).*
+    > *Tengo disponible este [Jueves a las 11:00] o el [Sábado a las 15:00] en nuestro estudio a pasos de Metro Pedro de Valdivia. ¿Cuál te acomoda mejor?"*
 
 ---
 
-## 8. REGISTRO DE DECISIONES DE DISEÑO Y DESARROLLO WEB
+### 4.2. Guion para el Programa "Rostros de Colección" (5% Beneficio)
+*(Cómo ofrecérselo a una clienta para que se sienta una celebridad y no una clienta de descuento)*
 
-*   **Formato de Entrega Digital:** Single Page Application / Executive Agency Deck interactivo, responsive, con selector de vista (Modo Pitch Deck de Presentación / Modo Web del Estudio).
-*   **Tecnologías Utilizadas:** HTML5 semántico, CSS3 moderno con variables de diseño (Tailwind-compatible styling, Glassmorphism, Luxury Dark Theme con toques Champagne Gold), Vanilla JavaScript modular y componentes interactivos (calculadora de rentabilidad, visor antes/después, simulador de trazos, acordeones estratégicos).
-*   **Arquitectura de Repositorio:** Preparado para despliegue inmediato en GitHub Pages en `https://github.com/kulhunter/JacquelineBarraza`.
+> *"Estimada [Nombre], por la armonía de tus facciones y tu tono de piel, Jacqueline te ha preseleccionado como candidata para nuestro programa exclusivo **'Rostros de Colección 2026'**.*
+>
+> *¿En qué consiste?*
+> *1. Documentamos tu proceso con fotografía macro de alta definición para nuestro portafolio de autor.*
+> *2. A cambio, recibes un **5% de beneficio directo** en tu procedimiento, un **Kit Post-Cuidado Dermatológico Premium** de cortesía y una **sesión de perfilado de mantenimiento gratuita a los 6 meses**.*
+>
+> *Solo abrimos 5 cupos al mes bajo este formato. ¿Te gustaría activar tu beneficio para tu sesión de esta semana?"*
 
 ---
-*Este documento se mantendrá actualizado con cada evolución del proyecto y sirve de bitácora metodológica oficial.*
+
+### 4.3. Guion de Venta para el "Latex Day Presencial" (13 de Septiembre)
+*(Para publicar en Stories, Reels y enviar a grupos de estética en Chile)*
+
+> *"¿Cuántos cursos de microblading has hecho donde te prometieron que saldrías lista para trabajar... y al llegar a tu casa te dio pánico tocar a tu primera clienta?*
+>
+> *El problema no eres tú. El problema es que te enseñaron teoría y te dejaron sola frente al látex.*
+>
+> *Este **13 de Septiembre en Providencia**, junto a mi colega **Frainy Díaz**, abrimos el **LATEX DAY PRESENCIAL**: 8 horas de entrenamiento intensivo donde nos sentaremos a tu lado a corregir tu ángulo, la profundidad exacta de tu aguja y la simetría de tus espinas.*
+>
+> *Incluye: Kit completo de práctica, látex de alto rendimiento y coffee break.*
+> *Valor Preventa Especial: **$39.990 CLP** (Cupos estrictamente limitados para garantizar atención 1 a 1).*
+>
+> *👉 Con una sola clienta que atiendas cobrando $120.000, recuperas 3 veces lo que invertiste en este taller. Escríbeme 'LATEX' por mensaje interno para asegurar tu cupo antes de que se agoten."*
+
+---
+
+## 5. PLANNING DE LANZAMIENTO (CRONOGRAMA DE ACCIÓN DÍA A DÍA)
+
+```
+SEMANA 1 (Días 1-7)      SEMANA 2 (Días 8-14)     SEMANA 3 (Días 15-21)    SEMANA 4 (13 Septiembre)
+┌──────────────────────┐ ┌──────────────────────┐ ┌──────────────────────┐ ┌──────────────────────┐
+│ • Registro de dominio│ │ • Lanzamiento video  │ │ • Conteo regresivo   │ │ • EJECUCIÓN DEL      │
+│   jacquelinebarraza.cl││   "Latex Day"        │ │   "Últimos 3 cupos"  │ │   LATEX DAY          │
+│ • Optimización de    │ │ • Activación de      │ │ • Publicación de     │ │   (8 horas)          │
+│   Google Business    │ │   "Rostros Colección"│ │   testimonios WinArt │ │ • Venta de Mentoría  │
+│ • Setup de WhatsApp  │ │ • Publicación de     │ │ • Confirmación y     │ │   Avanzada a las     │
+│   Business con guion │ │   "Autopsia de Ceja" │ │   envío de kit látex │ │   alumnas asistentes │
+└──────────────────────┘ └──────────────────────┘ └──────────────────────┘ └──────────────────────┘
+```
+
+---
+
+## 6. CONCLUSIONES Y PASOS OPERATIVOS INMEDIATOS
+
+1.  **Registrar `jacquelinebarraza.cl` en NIC Chile hoy mismo.**
+2.  **Desplegar el prototipo interactivo en GitHub Pages para que Jacqueline y su equipo puedan revisarlo.**
+3.  **Implementar los guiones de WhatsApp para las consultas que entran desde Instagram.**
+4.  **Lanzar la campaña orgánica de 'Latex Day' con el argumento de payback 3x.**
