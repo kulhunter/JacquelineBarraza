@@ -22,7 +22,19 @@ Este proyecto transforma su talento técnico de clase mundial en una **Instituci
 ## 📂 Estructura del Repositorio
 ```
 ├── FLUJO_DE_INFORMACION_Y_PENSAMIENTO.md   # Registro maestro de investigación, hipótesis y funnels
-├── index.html                              # Deck interactivo / Prototipo web de alta fidelidad
-├── styles.css                              # Estilos visuales de lujo y glassmorphism
+├── index.html                              # Deck interactivo (32 slides full mobile & desktop)
+├── styles.css                              # Estilos visuales complementarios y glassmorphism
+├── Jacqueline Barraza.cl.png               # Logotipo oficial (Propuesta A: Rostro de autor)
+├── poplog1.png                             # Propuesta de identidad B (Monograma de autor)
+├── poplog2.png                             # Propuesta de identidad C (Alta tipografía)
+├── .gitignore                              # Archivos ignorados por control de versiones
 └── README.md                               # Documento de bienvenida y contexto
 ```
+
+---
+
+## 📱 Deck Interactivo (32 Slides)
+El archivo [`index.html`](file:///Users/dan/Downloads/Jacqueline%20Barraza/index.html) contiene la presentación ejecutiva completa de 32 diapositivas:
+- **Navegación fluida:** Soporta swipe vertical en smartphones, flechas de teclado (↑/↓/←/→), barra espaciadora, `PageUp`/`PageDown`, botones flotantes y clic directo en cualquier segmento de la barra de progreso superior.
+- **Diseño Ultra-Mobile:** Optimizado con Safe Areas para iPhone (Dynamic Island y barra de inicio) y adaptado a monitores de escritorio.
+- **Propuestas de Marca:** Incluye la comparativa de las 3 alternativas de identidad visual (Propuesta A, B y C) con sus respectivos renders en alta resolución.
