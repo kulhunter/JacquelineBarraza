@@ -242,10 +242,10 @@ Objetivo: Atraer alumnas con intención inmediata de formación.
 ## LAS 5 PROPUESTAS DE DIFERENCIACIÓN PARA JACQUELINE BARRAZA
 
 1. **Identidad Verbal Afectiva ("Tus Cejitas"):** Saludo característico *"Hola mis cejitas"* + concepto *"Diagnóstico de cejitas"*. Genera ternura y cercanía sin perder rigor.
-2. **Ancla Cromática (Guantes Rose Dust + Anillo Rose Gold):** Guantes de nitrilo rosa palo que rompen el cliché del guante negro genérico.
-3. **Objeto Fetiche (Compás Áureo Rose Gold con grabado "JB"):** El compás siempre abre el primer segundo de video con click metálico sonoro.
-4. **Ritual de Contenido (El Espejo de las Cejitas):** Espejo vintage ovalado con marco oro rosa donde se captura la reacción real de la clienta al verse por primera vez.
-5. **Vestuario de Autor (Bata Kimono Negra con ribete Rose Gold):** Estética de alta costura que la posiciona como diseñadora y maestra artesana.
+2. **Ancla Cromática (Guantes Nitrilo Rosado Mächtig/Techdent + Anillo Rose Gold):** Guantes de nitrilo rosado que rompen el cliché del guante negro genérico con distinción y calidez.
+3. **Objeto Fetiche (Compás Áureo de Premiación/Campeona):** Su compás es el galardón/premio real obtenido en competencia. Abre el primer segundo de video con click metálico sonoro.
+4. **Ritual de Contenido (El Espejo de las Cejitas - Kootinn Ovalado Oro Rosa):** Espejo vintage ovalado de mano donde se captura la emoción genuina de la clienta al verse por primera vez.
+5. **Vestuario de Autor & Naming (Traje Negro + Pin Metálico jacquelinebarraza.cl):** Se elimina la sigla "JB" para evitar confusiones comerciales (marcas de comida en Chile). Sobre su traje/bata negra pulcra lleva un pin metálico en oro rosa con su dominio web `jacquelinebarraza.cl`.
 
 ---
 
