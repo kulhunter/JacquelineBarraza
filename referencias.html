@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Benchmark Global & Diferenciadores — Jacqueline Barraza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400&family=Playfair+Display:ital,wght@0,600;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    :root {
+      --rose: #C27B75;
+      --rose-light: #E8B2AF;
+      --rose-dim: rgba(194,123,117,0.14);
+      --rose-border: rgba(194,123,117,0.28);
+      --black: #080808;
+      --dark: #111113;
+      --card: rgba(16,14,14,0.94);
+      --white: #FFFFFF;
+      --white75: rgba(255,255,255,0.78);
+      --white50: rgba(255,255,255,0.52);
+      --white20: rgba(255,255,255,0.12);
+    }
+
+    *::-webkit-scrollbar { display: none; }
+    * { scrollbar-width: none; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow: hidden;
+      touch-action: pan-y;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    #deck {
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+      overscroll-behavior-y: contain;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .s {
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    .bg {
+      position: absolute; inset: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+      transform: scale(1.03);
+      transition: transform 12s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: transform;
+    }
+    .s:hover .bg { transform: scale(1.08); }
+
+    .ov {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(
+        to bottom,
+        rgba(8,8,8,0.02) 0%,
+        rgba(8,8,8,0.2) 25%,
+        rgba(8,8,8,0.72) 55%,
+        rgba(8,8,8,0.97) 78%,
+        #080808 100%
+      );
+    }
+    .ov-solid { background: rgba(8,8,8,0.97); }
+
+    .b {
+      position: relative; z-index: 10;
+      padding-top: calc(env(safe-area-inset-top, 44px) + 16px);
+      padding-bottom: calc(env(safe-area-inset-bottom, 34px) + 64px);
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      max-height: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .b-center {
+      position: relative; z-index: 10;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      max-height: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-top: calc(env(safe-area-inset-top, 44px) + 16px);
+      padding-bottom: calc(env(safe-area-inset-bottom, 34px) + 64px);
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .tag {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rose);
+      display: block;
+      margin-bottom: 0.55rem;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -0.01em;
+    }
+
+    .h1 { font-size: clamp(1.85rem, 8.2vw, 3.2rem); margin-bottom: 0.65rem; }
+    .h2 { font-size: clamp(1.55rem, 6.8vw, 2.5rem); margin-bottom: 0.55rem; }
+    .h3 { font-size: clamp(1.25rem, 5.5vw, 1.9rem); margin-bottom: 0.5rem; }
+
+    .rose { color: var(--rose); }
+    .rose-light { color: var(--rose-light); }
+
+    .serif-italic {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+
+    .body-lg {
+      font-size: clamp(0.92rem, 3.7vw, 1.05rem);
+      font-weight: 300;
+      line-height: 1.55;
+      color: var(--white75);
+    }
+
+    .body-md {
+      font-size: clamp(0.8rem, 3.2vw, 0.92rem);
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--white75);
+    }
+
+    .body-sm {
+      font-size: clamp(0.72rem, 2.85vw, 0.82rem);
+      font-weight: 300;
+      line-height: 1.48;
+      color: var(--white50);
+    }
+
+    .div {
+      width: 1.8rem; height: 1.5px;
+      background: var(--rose);
+      border-radius: 2px;
+      margin: 0.65rem 0;
+    }
+    .div-c { margin: 0.65rem auto; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rose-border);
+      border-radius: 0.85rem;
+      padding: 0.8rem 0.95rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .card-dark {
+      background: rgba(12,12,14,0.96);
+      border: 1px solid var(--white20);
+      border-radius: 0.85rem;
+      padding: 0.8rem 0.95rem;
+    }
+
+    .card-accent {
+      background: var(--rose-dim);
+      border: 1px solid var(--rose-border);
+      border-radius: 0.85rem;
+      padding: 0.8rem 0.95rem;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.22rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--rose-border);
+      color: var(--rose);
+    }
+    .pill-filled {
+      background: var(--rose);
+      color: var(--black);
+      border-color: var(--rose);
+    }
+
+    .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
+
+    #pbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; gap: 2.5px;
+      padding: calc(env(safe-area-inset-top, 44px) + 4px) 1rem 4px;
+      background: linear-gradient(to bottom, rgba(8,8,8,0.85) 0%, rgba(8,8,8,0.3) 65%, transparent 100%);
+      pointer-events: none;
+    }
+    .seg {
+      flex: 1; height: 2px; border-radius: 2px;
+      background: rgba(255,255,255,0.16);
+      transition: background 0.25s ease;
+    }
+    .seg.d { background: var(--rose); }
+    .seg.a { background: var(--rose-light); }
+
+    #bnav {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+      padding: 0.5rem 1.25rem calc(env(safe-area-inset-bottom, 34px) + 0.35rem);
+      background: linear-gradient(to top, rgba(8,8,8,0.98) 60%, rgba(8,8,8,0.7) 85%, transparent 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 480px; margin: 0 auto;
+      left: 50%; transform: translateX(-50%); right: auto; width: 100%;
+    }
+
+    #ctr {
+      font-family: 'Cinzel', serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      color: var(--rose);
+      font-weight: 700;
+    }
+
+    .nbtn {
+      min-height: 38px;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--rose-border);
+      background: rgba(194,123,117,0.12);
+      color: var(--rose);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+    .nbtn:active {
+      transform: scale(0.94);
+      opacity: 0.8;
+    }
+    .nbtn-next {
+      background: var(--rose);
+      color: var(--black);
+      border-color: var(--rose);
+      font-weight: 800;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 46px;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 0.68rem; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none;
+      background: var(--rose);
+      color: var(--black);
+      margin-top: 0.55rem;
+      transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+    .cta:active {
+      transform: scale(0.96);
+      opacity: 0.85;
+    }
+
+    .mb1 { margin-bottom: 0.3rem; }
+    .mb2 { margin-bottom: 0.55rem; }
+    .mb3 { margin-bottom: 0.85rem; }
+    .mt1 { margin-top: 0.3rem; }
+    .mt2 { margin-top: 0.55rem; }
+    .sp > * + * { margin-top: 0.5rem; }
+    .fl { display: flex; }
+    .fl-c { align-items: center; }
+    .fl-sb { justify-content: space-between; }
+    .gap1 { gap: 0.45rem; }
+    .fw7 { font-weight: 700; }
+    .fw8 { font-weight: 800; }
+    .ita { font-style: italic; }
+
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem; height: 1.5rem;
+      border-radius: 50%;
+      background: var(--rose);
+      color: var(--black);
+      font-weight: 900;
+      font-size: 0.65rem;
+      margin-right: 0.4rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div id="pbar"></div>
+
+<div id="bnav">
+  <button class="nbtn" id="bp">← Ant.</button>
+  <span id="ctr">01 / 21</span>
+  <button class="nbtn nbtn-next" id="bn">Sig. →</button>
+</div>
+
+<div id="deck">
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 01 · PORTADA -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background-image:url('https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg')"></div>
+  <div class="ov"></div>
+  <div class="b">
+    <span class="tag">Benchmark Global & Estrategia Visual</span>
+    <h1 class="h1">CÓMO CREAR<br><span class="rose">UN ÍCONO.</span></h1>
+    <div class="div"></div>
+    <p class="body-lg serif-italic mb3">
+      Estudio de 10 referentes mundiales de micropigmentación y 5 diferenciadores únicos para Jacqueline Barraza.
+    </p>
+    <div class="card-accent">
+      <p class="body-sm" style="color:var(--white);">
+        De la técnica invisible al <strong>ancla visual inconfundible</strong> en redes sociales.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 02 · LA TESIS DEL ANCLA VISUAL -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <span class="tag">01 — La Tesis</span>
+    <h2 class="h2">Nadie recuerda<br><span class="rose">un procedimiento.<br>Recuerdan un código.</span></h2>
+    <div class="div"></div>
+    <p class="body-lg mb2">
+      En Instagram y TikTok hay más de 50.000 artistas mostrando cejas "pelo a pelo". El 99% se ve exactamente igual: guante negro genérico, aro de luz blanco y fondo blanco.
+    </p>
+    <div class="card-accent mb1">
+      <p class="fw7 mb1" style="font-size:0.8rem;color:var(--rose-light);">El Secreto de los Masters Globales</p>
+      <p class="body-sm">Los que cobran $2.000 USD por servicio o llenan academias mundiales no tienen "mejores fotos". Tienen un <strong>Ancla Visual + Ancla Verbal</strong> que el cerebro del usuario reconoce en 0.3 segundos sin leer el nombre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 03 · REF 01: OKSANA MARTYNENKO -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background-image:url('https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg')"></div>
+  <div class="ov"></div>
+  <div class="b">
+    <div class="fl fl-c fl-sb mb1">
+      <span class="tag" style="margin-bottom:0;">Referente 01</span>
+      <span class="pill">@o.martynenko</span>
+    </div>
+    <h2 class="h2">Oksana<br><span class="rose">Martynenko</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🟢 Su Ancla Visual: El Verde Esmeralda</p>
+        <p class="body-sm">Utiliza SIEMPRE un elemento verde: guantes esmeralda, vestido verde, bata o accesorios. Si haces scroll rápido, sabes al instante que es ella.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🎓 Concepto de Marca Propio: CSHMR Brows</p>
+        <p class="body-sm">No dice "hago microblading". Dice "creé la técnica CSHMR (Cashmere)". El nombre propio le da estatus de inventora y formadora de élite.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 04 · REF 02: BRANKO BABIC -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background-image:url('https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg')"></div>
+  <div class="ov"></div>
+  <div class="b">
+    <div class="fl fl-c fl-sb mb1">
+      <span class="tag" style="margin-bottom:0;">Referente 02</span>
+      <span class="pill">@branko_babic_phi</span>
+    </div>
+    <h2 class="h2">Branko<br><span class="rose">Babić (PhiAcademy)</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">📐 El Compás Áureo como "Cetro de Poder"</p>
+        <p class="body-sm">Transformó un instrumento de medición matemática en el símbolo sagrado del microblading mundial. Lo coloca en primer plano en cada fotografía.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🖤 El Monopolio del Negro y Oro</p>
+        <p class="body-sm">Traje negro a la medida + guantes negros + caja dorada. Creó la percepción de que PhiBrows es la "masonería de la belleza".</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 05 · REF 03: SVIATOSLAV OTCHENASH -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background-image:url('https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg')"></div>
+  <div class="ov"></div>
+  <div class="b">
+    <div class="fl fl-c fl-sb mb1">
+      <span class="tag" style="margin-bottom:0;">Referente 03</span>
+      <span class="pill">@sviatoslavotchenash</span>
+    </div>
+    <h2 class="h2">Sviatoslav<br><span class="rose">Otchenash</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🎬 El Ritual del "Slow Wipe" (Limpieza en Cámara Lenta)</p>
+        <p class="body-sm">Puso de moda el video donde limpia el exceso de pigmento oscuro con una toallita húmeda en 120fps. La revelación produce placer visual adictivo.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">💡 Iluminación de Claroscuro</p>
+        <p class="body-sm">Fondos totalmente negros con una sola fuente de luz lateral rasante que resalta la textura de cada poro y vello.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 06 · REF 04: SHAY DANIELLE -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background-image:url('https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg')"></div>
+  <div class="ov"></div>
+  <div class="b">
+    <div class="fl fl-c fl-sb mb1">
+      <span class="tag" style="margin-bottom:0;">Referente 04</span>
+      <span class="pill">@shaydanielle.pmu</span>
+    </div>
+    <h2 class="h2">Shay<br><span class="rose">Danielle</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🧤 Guantes Rosa Nude + Tono Conversacional</p>
+        <p class="body-sm">Eliminó la frialdad clínica. Usa guantes rosados y habla directo al lente con humor, vulnerabilidad y consejos de amiga profesional.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">☕ "Café y Cejas" (Formato Estable)</p>
+        <p class="body-sm">Comienza sus videos con una taza de café en la mano antes de ponerse los guantes. Crea cercanía y rutina de consumo diaria.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 07 · REF 05: JASMINE DIEBELIUS -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background-image:url('https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg')"></div>
+  <div class="ov"></div>
+  <div class="b">
+    <div class="fl fl-c fl-sb mb1">
+      <span class="tag" style="margin-bottom:0;">Referente 05</span>
+      <span class="pill">@jasmine_diebelius</span>
+    </div>
+    <h2 class="h2">Jasmine<br><span class="rose">Diebelius</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🎧 ASMR de Aguja + Música Lo-Fi Acústica</p>
+        <p class="body-sm">Sus videos no tienen reggaetón ni canciones de moda: tienen el sonido puro y nítido de la aguja acariciando la piel, acompañado de piano suave.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🔍 Plano Probe Macro</p>
+        <p class="body-sm">La cámara se desplaza a milímetros del vello, mostrando la microgotita de pigmento ingresando en la dermis. Hipnótico.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 08 · REF 06: NATALIYA YEREMENKO -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <div class="fl fl-c fl-sb mb1">
+      <span class="tag" style="margin-bottom:0;">Referente 06</span>
+      <span class="pill">@nataliya_yeremenko</span>
+    </div>
+    <h2 class="h2">Nataliya<br><span class="rose">Yeremenko</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">✏️ El Mapa en Pasta Blanca (Visagismo Artístico)</p>
+        <p class="body-sm">Pinta los contornos de la ceja con pasta blanca quirúrgica antes de micropigmentar. El contraste entre la pasta blanca y el vello parece una pintura al óleo.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">👗 Estética Editorial de Alta Costura</p>
+        <p class="body-sm">Fotografía a sus modelos con cuellos altos negros y peinados pulidos. La clienta siente que entra a Vogue, no a una cabina de estética.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 09 · REF 07: ALEKSANDRA MANIUSE -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <div class="fl fl-c fl-sb mb1">
+      <span class="tag" style="margin-bottom:0;">Referente 07</span>
+      <span class="pill">@deluxebrows</span>
+    </div>
+    <h2 class="h2">Aleksandra<br><span class="rose">Maniuse</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">👓 Las Lupas de Relojero / Cirujano</p>
+        <p class="body-sm">Siempre trabaja con visores de aumento montados en la frente. Comunica que su margen de error es menor a 0.1 milímetros.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">📊 Explicación Científica del Trazo</p>
+        <p class="body-sm">Dibuja esquemas de cómo el folículo piloso real crece en diferentes direcciones. Autoridad científica absoluta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 10 · REF 08: VERONIKA PETRAS -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <div class="fl fl-c fl-sb mb1">
+      <span class="tag" style="margin-bottom:0;">Referente 08</span>
+      <span class="pill">@veronikapetras_pmu</span>
+    </div>
+    <h2 class="h2">Veronika<br><span class="rose">Petras</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">📖 El Cuaderno de Bocetos en Látex</p>
+        <p class="body-sm">Graba videos dibujando patrones de cejas a mano alzada en una libreta de látex negro con tinta blanca. Arte puro previo a la máquina.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">💜 Guantes Lavanda / Lila</p>
+        <p class="body-sm">Reemplazó el guante negro por lila pastel. Su feed tiene un tono suave y femenino reconocible al instante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 11 · REF 09: MARA COLORS -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <div class="fl fl-c fl-sb mb1">
+      <span class="tag" style="margin-bottom:0;">Referente 09</span>
+      <span class="pill">@mara.colors</span>
+    </div>
+    <h2 class="h2">Mara<br><span class="rose">Colors</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">💧 El Goteo de Pigmento Macro</p>
+        <p class="body-sm">Videos en ultra primer plano de una gota de pigmento cayendo sobre la punta de la aguja o mezclándose con agua micelar. Visualmente magnético.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🎨 La Alquimia del Color</p>
+        <p class="body-sm">Explica cómo mezcla tres tonos para igualar el subtono exacto de la piel de cada mujer latina. Elimina el miedo a los colores naranja o azul.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 12 · REF 10: TONI BELFATTO -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <div class="fl fl-c fl-sb mb1">
+      <span class="tag" style="margin-bottom:0;">Referente 10</span>
+      <span class="pill">@tonibelfatto</span>
+    </div>
+    <h2 class="h2">Toni<br><span class="rose">Belfatto</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🩺 El Desempaque Estéril / Rigor Médico</p>
+        <p class="body-sm">Muestra el sonido del blíster médico abriéndose frente a la cámara. Comunica que la micropigmentación es un procedimiento paramédico serio.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🕊️ El Impacto Emocional Paramédico</p>
+        <p class="body-sm">Especialista en reconstrucción de areolas oncológicas. Trata cada procedimiento como un acto de restauración de la dignidad de la mujer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 13 · MATRIZ COMPARATIVA -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <span class="tag">Síntesis de Aprendizajes</span>
+    <h2 class="h2">El Patrón<br><span class="rose">del Éxito.</span></h2>
+    <div class="div"></div>
+    <div class="card-dark mb2">
+      <p class="body-sm" style="line-height:1.7;">
+        Todos los creadores de más de 100K seguidores en PMU combinan 3 elementos:<br>
+        1. <strong>Un Color Distintivo</strong> (Verde, Rosa, Lila, Dorado)<br>
+        2. <strong>Un Objeto de Poder</strong> (Compás, Lupas, Libreta, Espejo)<br>
+        3. <strong>Un Vocabulario Afectivo Propio</strong>
+      </p>
+    </div>
+    <div class="card-accent">
+      <p class="fw7 mb1" style="font-size:0.8rem;">La Gran Oportunidad de Jacqueline:</p>
+      <p class="body-sm">Nadie en Chile combina el <strong>Rigor Técnico Internacional (WinArt)</strong> con la <strong>Cercanía Cálida y Amorosa ("Mis Cejitas")</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 14 · EL CONCEPTO PARA JACQUELINE -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background-image:url('https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg')"></div>
+  <div class="ov" style="background:rgba(8,8,8,0.92)"></div>
+  <div class="b-center">
+    <img src="Jacqueline%20Barraza.cl.png" alt="Jacqueline Barraza" style="width:100%;max-width:170px;height:auto;margin:0 auto 1rem;display:block;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.9));">
+    <span class="tag" style="text-align:center;">La Fórmula Maestra</span>
+    <h1 class="h1" style="text-align:center;font-size:clamp(1.75rem,7.5vw,2.8rem);">
+      ALTA PRECISIÓN +<br><span class="rose">CALIDEZ DE AUTOR</span>
+    </h1>
+    <div class="div div-c"></div>
+    <p class="body-lg serif-italic" style="text-align:center;max-width:350px;">
+      "Cuidar tus cejitas con la exactitud de un cirujano y el cariño de quien ama su arte."
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 15 · PROPUESTA 1: EL UNIVERSO DE "CEJITAS" -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <span class="tag">Propuesta 01 / 05 — Identidad Verbal</span>
+    <h2 class="h2"><span class="step-badge">1</span>El Territorio de<br><span class="rose">"Tus Cejitas"</span></h2>
+    <div class="div"></div>
+    <p class="body-md mb2">
+      "Cejitas" es un diminutivo chileno entrañable. Desactiva el miedo, genera empatía instantánea y crea una comunidad de seguidoras fieles.
+    </p>
+    <div class="sp">
+      <div class="card-accent">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">Frases Gancho para Sus Videos:</p>
+        <p class="body-sm" style="line-height:1.8;">
+          ✨ <em>"Hola mis cejitas hermosas..."</em> (Saludo fijo)<br>
+          ✨ <em>"Vamos a consentir a tus cejitas hoy."</em><br>
+          ✨ <em>"Diagnóstico de cejitas: ¿por qué este trazo no va aquí?"</em><br>
+          ✨ <em>"Cejitas sanas, mirada poderosa."</em>
+        </p>
+      </div>
+      <div class="card-dark">
+        <p class="body-sm">Esto convierte a sus clientas en una <strong>tribu afectiva</strong>, no en simples pacientes de clínica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 16 · PROPUESTA 2: GUANTES ROSA PALO -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <span class="tag">Propuesta 02 / 05 — Ancla Cromática</span>
+    <h2 class="h2"><span class="step-badge">2</span>El Guante<br><span class="rose">"Rose Dust"</span></h2>
+    <div class="div"></div>
+    <p class="body-md mb2">
+      Así como Oksana Martynenko usa verde, Jacqueline debe tener su propio color inconfundible en las manos.
+    </p>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🌸 Guantes de Nitrilo Rosa Empolvado / Rose Dust</p>
+        <p class="body-sm">El 98% de los técnicos en Chile usa guantes negros. Un guante rosa palo contra la piel y el látex negro genera un contraste estético sofisticado y dulce a la vez.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">💍 El Anillo Fetiche Rose Gold</p>
+        <p class="body-sm">Usar siempre un anillo minimalista de oro rosa sobre el dedo pulgar o índice enguantado. Se convierte en su firma de autor en cada plano cerrado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 17 · PROPUESTA 3: EL COMPÁS ÁUREO ROSE GOLD -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background-image:url('https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg')"></div>
+  <div class="ov"></div>
+  <div class="b">
+    <span class="tag">Propuesta 03 / 05 — Objeto Fetiche</span>
+    <h2 class="h2"><span class="step-badge">3</span>El Compás Áureo<br><span class="rose">de Oro Rosa</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card-accent">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">📐 El Hook de los Primeros 2 Segundos</p>
+        <p class="body-sm">En cada video educativo, el primer fotograma es el compás abriéndose sobre la pantalla hacia el rostro o el látex con sonido de "click metálico".</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🏆 Grabado Personalizado: "JB Master"</p>
+        <p class="body-sm">Su compás no es comprado en una tienda genérica: tiene grabado su monograma JB. Es su instrumento de precisión quirúrgica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 18 · PROPUESTA 4: EL RITUAL DEL ESPEJO MÁGICO -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background-image:url('https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg')"></div>
+  <div class="ov"></div>
+  <div class="b">
+    <span class="tag">Propuesta 04 / 05 — Ritual de Contenido</span>
+    <h2 class="h2"><span class="step-badge">4</span>El Espejo de las<br><span class="rose">Cejitas</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🪞 El Momento de la Verdad</p>
+        <p class="body-sm">Jacqueline tiene un espejo de mano vintage ovalado con marco de oro rosa. Se lo entrega a la clienta diciendo: <em>"Mira tus cejitas por primera vez"</em>.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">🎥 El Plano Invertido (Cámara Tras el Espejo)</p>
+        <p class="body-sm">La cámara graba los ojos de la clienta reflejados en el espejo iluminándose de emoción. Cero poses fingidas: pura emoción real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 19 · PROPUESTA 5: LA BATA KIMONO DE ALTA COSTURA -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <span class="tag">Propuesta 05 / 05 — Vestuario de Marca</span>
+    <h2 class="h2"><span class="step-badge">5</span>La Bata Kimono<br><span class="rose">Negro & Rose</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card-accent">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">👘 Adiós al Delantal Médico Aburrido</p>
+        <p class="body-sm">Una bata estilo kimono cruzado en lino o algodón negro mate, con ribete fino en oro rosado y el monograma "JB" bordado en el pecho izquierdo.</p>
+      </div>
+      <div class="card-dark">
+        <p class="fw7 mb1" style="font-size:0.78rem;color:var(--rose-light);">👑 Percepción de Maestra Artesana</p>
+        <p class="body-sm">Transmite inmediatamente que es una <strong>diseñadora de rostros</strong> y una artista de alta costura, distanciándose de salones masivos de bajo costo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 20 · CHECKLIST DE RODAJE 15 SEPT -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background:#080808"></div>
+  <div class="ov ov-solid"></div>
+  <div class="b">
+    <span class="tag">Aplicación Práctica</span>
+    <h2 class="h2">Checklist para el<br><span class="rose">15 de Septiembre.</span></h2>
+    <div class="div"></div>
+    <div class="sp">
+      <div class="card-dark">
+        <p class="body-sm" style="line-height:1.8;">
+          ✅ <strong>Caja de guantes rosa palo (Rose Dust)</strong> comprada para la sesión.<br>
+          ✅ <strong>Compás áureo</strong> limpio y pulido para los planos macro.<br>
+          ✅ <strong>Bata o vestimenta negra pulcra</strong> con detalles cálidos.<br>
+          ✅ <strong>3 látex negros y claros</strong> listos para ASMR de trazos.<br>
+          ✅ <strong>Guion del saludo:</strong> <em>"Hola mis cejitas..."</em> practicado con soltura y cariño.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 21 · CIERRE -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="s">
+  <div class="bg" style="background-image:url('https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg')"></div>
+  <div class="ov" style="background:rgba(8,8,8,0.92)"></div>
+  <div class="b-center">
+    <img src="Jacqueline%20Barraza.cl.png" alt="Jacqueline Barraza" style="width:100%;max-width:180px;height:auto;margin:0 auto 1.2rem;display:block;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.9));">
+    <h1 class="h1" style="text-align:center;font-size:clamp(1.8rem,8vw,2.8rem);">
+      DE ARTISTA<br><span class="rose">A ÍCONO.</span>
+    </h1>
+    <div class="div div-c"></div>
+    <p class="body-lg serif-italic" style="text-align:center;max-width:340px;margin-bottom:1.5rem;">
+      "La técnica te hace ganar premios. El código visual y el cariño te hacen inolvidable."
+    </p>
+    <a href="index.html" class="cta" style="max-width:300px;">
+      Ver Presentación Principal
+    </a>
+  </div>
+</section>
+
+</div><!-- /deck -->
+
+<script>
+  const deck  = document.getElementById('deck');
+  const pbar  = document.getElementById('pbar');
+  const ctr   = document.getElementById('ctr');
+  const TOTAL = document.querySelectorAll('.s').length;
+
+  for (let i = 0; i < TOTAL; i++) {
+    const s = document.createElement('div');
+    s.className = 'seg' + (i === 0 ? ' a' : '');
+    pbar.appendChild(s);
+  }
+
+  let current = 0;
+
+  function updateUI(idx) {
+    current = Math.max(0, Math.min(TOTAL - 1, idx));
+    const segs = pbar.querySelectorAll('.seg');
+    segs.forEach((s, i) => {
+      s.className = 'seg' + (i < current ? ' d' : i === current ? ' a' : '');
+    });
+    ctr.textContent = String(current + 1).padStart(2,'0') + ' / ' + String(TOTAL).padStart(2,'0');
+  }
+
+  function goTo(idx) {
+    const slides = document.querySelectorAll('.s');
+    const target = slides[Math.max(0, Math.min(TOTAL - 1, idx))];
+    if (target) deck.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+  }
+
+  deck.addEventListener('scroll', () => {
+    const idx = Math.round(deck.scrollTop / window.innerHeight);
+    updateUI(idx);
+  }, { passive: true });
+
+  document.getElementById('bn').addEventListener('click', () => goTo(current + 1));
+  document.getElementById('bp').addEventListener('click', () => goTo(current - 1));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+    if (e.key === 'ArrowUp'   || e.key === 'ArrowLeft')  { e.preventDefault(); goTo(current - 1); }
+  });
+
+  let ty = 0;
+  deck.addEventListener('touchstart', e => { ty = e.touches[0].clientY; }, { passive: true });
+  deck.addEventListener('touchend',   e => {
+    const dy = ty - e.changedTouches[0].clientY;
+    if (Math.abs(dy) > 45) goTo(current + (dy > 0 ? 1 : -1));
+  }, { passive: true });
+
+  updateUI(0);
+</script>
+</body>
+</html>

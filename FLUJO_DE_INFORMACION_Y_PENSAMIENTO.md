@@ -189,4 +189,64 @@ Objetivo: Atraer alumnas con intención inmediata de formación.
 
 ---
 
+## BENCHMARK GLOBAL DE MASTERS PMU (CÓDIGOS VISUALES & VERBALES)
+
+### 1. Oksana Martynenko (@o.martynenko)
+- **Ancla Visual:** Color Verde Esmeralda (guantes, vestuario, cintas de fijación, acentos de estudio).
+- **Ancla Verbal:** Concepto de autor "CSHMR Brows" (Cashmere).
+- **Aprendizaje:** Un solo color contrastante en las manos genera reconocimiento de marca en milisegundos.
+
+### 2. Branko Babić (@branko_babic_phi - PhiAcademy)
+- **Ancla Visual:** El Compás Áureo en primer plano como objeto totémico + estética de lujo negro/oro.
+- **Ancla Verbal:** "The Golden Ratio / La Proporción Divina".
+- **Aprendizaje:** Los instrumentos matemáticos transmiten infalibilidad y mística artesanal.
+
+### 3. Sviatoslav Otchenash (@sviatoslavotchenash - Academy S)
+- **Ancla Visual:** "The Slow Wipe" en 120fps + iluminación de claroscuro con fondo negro absoluto.
+- **Ancla Verbal:** "Master the stroke".
+- **Aprendizaje:** El momento de retirar el exceso de pigmento es el gancho visual más viral del microblading.
+
+### 4. Shay Danielle (@shaydanielle.pmu)
+- **Ancla Visual:** Guantes rosa nude + taza de café en mano en cada intro.
+- **Ancla Verbal:** Desmitificación con humor, calidez y tono de colega/amiga.
+- **Aprendizaje:** Romper la frialdad médica aumenta la conversión en un 40%.
+
+### 5. Jasmine Diebelius (@jasmine_diebelius)
+- **Ancla Visual:** Tomas probe macro a milímetros de la aguja con luz de atardecer lateral.
+- **Ancla Auditiva:** ASMR puro de aguja sobre piel + música lo-fi acústica (cero reggaetón/pop).
+- **Aprendizaje:** El sonido hipnótico retiene al usuario en TikTok y Reels.
+
+### 6. Nataliya Yeremenko (@nataliya_yeremenko)
+- **Ancla Visual:** Marcado de visagismo con pasta blanca quirúrgica (efecto cuadro al óleo) + vestuario editorial.
+- **Aprendizaje:** El "diseño previo" es tan hermoso como el resultado final.
+
+### 7. Aleksandra Maniuse (@deluxebrows)
+- **Ancla Visual:** Lupas quirúrgicas/de relojero montadas en la frente.
+- **Aprendizaje:** La postura científica justifica un precio premium 3x superior al promedio.
+
+### 8. Veronika Petras (@veronikapetras_pmu)
+- **Ancla Visual:** Guantes lila pastel + libreta de bocetos en látex negro con tinta blanca.
+- **Aprendizaje:** Mostrar la práctica en papel/látex como obra de arte atrae alumnas de alto perfil.
+
+### 9. Mara Colors (@mara.colors)
+- **Ancla Visual:** Macro gotas de pigmento cayendo sobre la aguja.
+- **Ancla Verbal:** "La alquimia del color personalizado para piel latina".
+- **Aprendizaje:** Eliminar el miedo a colores indeseados (gris/azul) educa y vende.
+
+### 10. Toni Belfatto (@tonibelfatto)
+- **Ancla Visual:** Desempaque estéril frente a cámara + bata blanca clínica.
+- **Aprendizaje:** El aspecto paramédico y de salud eleva la confianza en clientes escépticos.
+
+---
+
+## LAS 5 PROPUESTAS DE DIFERENCIACIÓN PARA JACQUELINE BARRAZA
+
+1. **Identidad Verbal Afectiva ("Tus Cejitas"):** Saludo característico *"Hola mis cejitas"* + concepto *"Diagnóstico de cejitas"*. Genera ternura y cercanía sin perder rigor.
+2. **Ancla Cromática (Guantes Rose Dust + Anillo Rose Gold):** Guantes de nitrilo rosa palo que rompen el cliché del guante negro genérico.
+3. **Objeto Fetiche (Compás Áureo Rose Gold con grabado "JB"):** El compás siempre abre el primer segundo de video con click metálico sonoro.
+4. **Ritual de Contenido (El Espejo de las Cejitas):** Espejo vintage ovalado con marco oro rosa donde se captura la reacción real de la clienta al verse por primera vez.
+5. **Vestuario de Autor (Bata Kimono Negra con ribete Rose Gold):** Estética de alta costura que la posiciona como diseñadora y maestra artesana.
+
+---
+
 *Documento vivo. Se actualiza con cada decisión del proyecto.*
